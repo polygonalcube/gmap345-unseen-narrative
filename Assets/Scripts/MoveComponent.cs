@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class MoveComponent : MonoBehaviour
 {
-    public float accel;
+    public CharacterController charCon;
+	
+	public float accel;
     public float decel;
 	public float maxSpeed;
 	public bool isNormalized;
@@ -81,7 +83,7 @@ public class MoveComponent : MonoBehaviour
 
     public void ResetY()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
+        transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
     }
 
     public void Move(Vector3 moveDir)
@@ -129,11 +131,13 @@ public class MoveComponent : MonoBehaviour
 			{
 				highestSpeed = zSpeed;
 			}
-			transform.position += new Vector3(xSpeed, ySpeed, zSpeed).normalized * Mathf.Abs(highestSpeed) * Time.deltaTime;
+			//transform.position += new Vector3(xSpeed, ySpeed, zSpeed).normalized * Mathf.Abs(highestSpeed) * Time.deltaTime;
+			charCon.Move(new Vector3(xSpeed, ySpeed, zSpeed).normalized * Mathf.Abs(highestSpeed) * Time.deltaTime);
 		}
 		else
 		{
-			transform.position += new Vector3(xSpeed, ySpeed, zSpeed) * Time.deltaTime;
+			//transform.position += new Vector3(xSpeed, ySpeed, zSpeed) * Time.deltaTime;
+			charCon.Move(new Vector3(xSpeed, ySpeed, zSpeed) * Time.deltaTime);
 		}
     }
 
@@ -152,7 +156,8 @@ public class MoveComponent : MonoBehaviour
 		//prevents the object from going too fast
 		angularSpeed = Cap(angularSpeed);
 
-		transform.position += transform.forward/*TransformDirection(moveDir)*/ * angularSpeed * Time.deltaTime;
+		//transform.position += moveDir/*TransformDirection(moveDir)*/ * angularSpeed * Time.deltaTime;
+		charCon.Move(moveDir * angularSpeed * Time.deltaTime);
     }
     /*
 var ang_speed:float

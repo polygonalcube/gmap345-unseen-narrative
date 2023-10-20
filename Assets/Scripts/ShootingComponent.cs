@@ -82,6 +82,16 @@ public class ShootingComponent : MonoBehaviour
                     }
                 }
             }
+            else
+            {
+                GameObject newProjectile = GameManager.gm.RetrieveBullet(startingPosition);
+                float originalAngle = shotDirection.y;
+                newProjectile.transform.eulerAngles = new Vector3(0f, originalAngle, 0f);
+                if (newProjectile.TryGetComponent<MoveComponent>(out MoveComponent mover))
+                {
+                    mover.angularSpeed = angularSpeed;
+                }
+            }
             shotDelay = shotDelaySet;
             onAlternativeCycle = !onAlternativeCycle;
         }

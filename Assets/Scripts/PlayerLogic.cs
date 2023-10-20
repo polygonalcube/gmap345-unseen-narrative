@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     //Make components project specific; don't try general
     //public HealthComponent hp;
     //public HurtboxComponent hbox;
-    public MoveComponent mov;
+    public MoveComponent mover;
 
     public Vector3 movValue = Vector3.zero;
 
@@ -44,7 +44,8 @@ public class PlayerController : MonoBehaviour
 
     void Movement()
     {
-        mov.Move(movValue);
+        mover.Move(movValue);
+        mover.ResetY();
     }
 
     void ReceiveInput()
