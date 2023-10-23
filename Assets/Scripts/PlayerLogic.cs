@@ -39,19 +39,22 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
         ReceiveInput();
-        Movement();
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            StartCoroutine(Dash());
+        }
+        else
+        {
+            Movement();
+        }
         
         //WhenDying();
     }
 
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            StartCoroutine(Dash());
-        }
+        
     }
 
     void Movement()
@@ -83,13 +86,12 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator Dash()
     {
-        Debug.Log("Nice");
-        canDash = false;
-        isDashing = true;       
-        Vector3 moveDirection = transform.forward * dashTime;
-        transform.position += (moveDirection * Time.deltaTime * dashPower);
-        isDashing = false;
-        yield return new WaitForSeconds(dashCooldown);
-        canDash = true;
+        
+        float startTime = Time.time;
+        while (Time.time < startTime + dashTime) 
+        {
+            transform.Translate(movValue * dashPower * Time.deltaTime);
+            yield return null;
+        }
     }
 }
