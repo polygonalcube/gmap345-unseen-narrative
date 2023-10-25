@@ -39,7 +39,7 @@ public class ShootingComponent : MonoBehaviour
         shotDelay -= Time.deltaTime;
     }
 
-    public void Shoot(Vector3 startingPosition, Vector3 positionOffset, Vector3 shotDirection, Vector3 targetPosition, Mode shotStyle = Mode.ANGULAR)
+    public void Shoot(Vector3 startingPosition, Vector3 positionOffset, Vector3 shotDirection, Vector3 targetPosition, string newTag = "Enemy Damage", Mode shotStyle = Mode.ANGULAR)
     {
         if (shotDelay <= 0)
         {
@@ -50,7 +50,7 @@ public class ShootingComponent : MonoBehaviour
                     for (int i = 0; i < bulletCount - 1; i++)
                     {
                         //GameObject newProjectile = spawner.Spawn(startingPosition);
-                        GameObject newProjectile = GameManager.gm.RetrieveBullet(startingPosition);
+                        GameObject newProjectile = GameManager.gm.RetrieveBullet(startingPosition, newTag);
                         float originalAngle = shotDirection.y;//Vector2.SignedAngle(Vector2.up, new Vector2(shotDirection.x, shotDirection.z));
                         //Debug.Log("originalAngle:", originalAngle);
                         float shotAngle = 0f;
@@ -68,7 +68,7 @@ public class ShootingComponent : MonoBehaviour
                     for (int i = 0; i < bulletCount; i++)
                     {
                         //GameObject newProjectile = spawner.Spawn(startingPosition);
-                        GameObject newProjectile = GameManager.gm.RetrieveBullet(startingPosition);
+                        GameObject newProjectile = GameManager.gm.RetrieveBullet(startingPosition, newTag);
                         float originalAngle = shotDirection.y;//Vector2.SignedAngle(Vector2.up, new Vector2(shotDirection.x, shotDirection.z));
                         //Debug.Log("originalAngle:", originalAngle);
                         float shotAngle = 0f;
@@ -84,7 +84,7 @@ public class ShootingComponent : MonoBehaviour
             }
             else
             {
-                GameObject newProjectile = GameManager.gm.RetrieveBullet(startingPosition);
+                GameObject newProjectile = GameManager.gm.RetrieveBullet(startingPosition, newTag);
                 float originalAngle = shotDirection.y;
                 newProjectile.transform.eulerAngles = new Vector3(0f, originalAngle, 0f);
                 if (newProjectile.TryGetComponent<MoveComponent>(out MoveComponent mover))

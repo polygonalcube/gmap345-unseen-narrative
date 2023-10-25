@@ -23,56 +23,59 @@ public class EnemyPopper : EnemyBaseClass
 
     void Update()
     {
-        switch(state)
+        if (player != null)
         {
-            case States.IDLE:
-                stateTimer += Time.deltaTime;
-                if (stateTimer > idleTime)
-                {
-                    stateTimer = 0f;
-                    state = States.MOVE;
-                }
-                break;
-            case States.MOVE:
-                if ((Vector3.Distance(transform.position, player.transform.position) < idealDist.x) || 
-                (Vector3.Distance(transform.position, player.transform.position) > idealDist.y))
-                {
-                    if (Vector3.Distance(transform.position, player.transform.position) > idealDist.y)
+            switch(state)
+            {
+                case States.IDLE:
+                    stateTimer += Time.deltaTime;
+                    if (stateTimer > idleTime)
                     {
-                        transform.eulerAngles = new Vector3(0f, AngleToObject(new Vector2(transform.position.x, transform.position.z), 
-                        new Vector2(player.transform.position.x, player.transform.position.z)), 0f);
-                        mover.MoveAngularly(transform.forward);
-                        transform.eulerAngles = Vector3.zero;
+                        stateTimer = 0f;
+                        state = States.MOVE;
+                    }
+                    break;
+                case States.MOVE:
+                    if ((Vector3.Distance(transform.position, player.transform.position) < idealDist.x) || 
+                    (Vector3.Distance(transform.position, player.transform.position) > idealDist.y))
+                    {
+                        if (Vector3.Distance(transform.position, player.transform.position) > idealDist.y)
+                        {
+                            transform.eulerAngles = new Vector3(0f, AngleToObject(new Vector2(transform.position.x, transform.position.z), 
+                            new Vector2(player.transform.position.x, player.transform.position.z)), 0f);
+                            mover.MoveAngularly(transform.forward);
+                            transform.eulerAngles = Vector3.zero;
+                        }
+                        else
+                        {
+                            transform.eulerAngles = new Vector3(0f, AngleToObject(new Vector2(transform.position.x, transform.position.z), 
+                            new Vector2(player.transform.position.x, player.transform.position.z)) + 180f, 0f);
+                            mover.MoveAngularly(transform.forward);
+                            transform.eulerAngles = Vector3.zero;
+                        }
                     }
                     else
                     {
-                        transform.eulerAngles = new Vector3(0f, AngleToObject(new Vector2(transform.position.x, transform.position.z), 
-                        new Vector2(player.transform.position.x, player.transform.position.z)) + 180f, 0f);
-                        mover.MoveAngularly(transform.forward);
-                        transform.eulerAngles = Vector3.zero;
+                        stateTimer = 0f;
+                        state = States.SHOOT;
                     }
-                }
-                else
-                {
-                    stateTimer = 0f;
-                    state = States.SHOOT;
-                }
-                mover.ResetY();
-                break;
-            case States.SHOOT:
-                stateTimer += Time.deltaTime;
-                if (stateTimer > shootTime)
-                {
-                    stateTimer = 0f;
-                    state = States.IDLE;
-                }
-                else
-                {
-                    shooter.Shoot(transform.position, positionOffset: Vector3.zero, 
-                    shotDirection: new Vector3(0f, AngleToObject(new Vector2(transform.position.x, transform.position.z), 
-                    new Vector2(player.transform.position.x, player.transform.position.z)), 0f), targetPosition: player.transform.position);
-                }
-                break;
+                    mover.ResetY();
+                    break;
+                case States.SHOOT:
+                    stateTimer += Time.deltaTime;
+                    if (stateTimer > shootTime)
+                    {
+                        stateTimer = 0f;
+                        state = States.IDLE;
+                    }
+                    else
+                    {
+                        shooter.Shoot(transform.position, positionOffset: Vector3.zero, 
+                        shotDirection: new Vector3(0f, AngleToObject(new Vector2(transform.position.x, transform.position.z), 
+                        new Vector2(player.transform.position.x, player.transform.position.z)), 0f), targetPosition: player.transform.position);
+                    }
+                    break;
+            }
         }
-    }
+    }   
 }

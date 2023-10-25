@@ -5,16 +5,21 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    //TO-DO:
-    //Make components project specific; don't try general
-    //public HealthComponent hp;
-    //public HurtboxComponent hbox;
+    public HPComponent hp;
+    public HurtComponent hbox;
     public MoveComponent mover;
+    public ShootingComponent shooter;
+
     public CharacterController charCon;
 
     public Vector3 movValue = Vector3.zero;
 
     public InputAction movement;
+
+    public InputAction reflect;
+    public bool isReflecting;
+    int bulletCount;
+    List<float> angles = new List<float>();
 
     private bool canDash = true;
     private bool isDashing;
@@ -25,16 +30,18 @@ public class PlayerController : MonoBehaviour
     void OnEnable()
     {
         movement.Enable();
+        reflect.Enable();
     }
 
     void OnDisable()
     {
         movement.Disable();
+        reflect.Disable();
     }
 
     void Start()
     {
-        //eh?
+        bulletCount = 0;
     }
 
     void Update()
@@ -48,7 +55,7 @@ public class PlayerController : MonoBehaviour
         {
             Movement();
         }
-        
+        Reflect();
         //WhenDying();
     }
 
@@ -67,6 +74,30 @@ public class PlayerController : MonoBehaviour
     {
         movValue = movement.ReadValue<Vector2>();
         movValue = new Vector3(movValue.x, 0f, movValue.y);
+
+        isReflecting = (reflect.ReadValue<float>() == 1f);
+    }
+
+    void Reflect()
+    {
+        if (isReflecting)
+        {
+            hbox.active = false;
+        }
+        else if (!isReflecting)
+        {
+            hbox.active = true;
+            if (bulletCount > 0)
+            {
+                for (int i = 0; i < bulletCount; i++)
+                {
+                    shooter.Shoot(transform.position, positionOffset: Vector3.zero, 
+                    shotDirection: new Vector3(0f, angles[i], 0f), targetPosition: transform.position, "Player Damage");
+                }
+            }
+            bulletCount = 0;
+            angles.Clear();
+        }
     }
     /*
     void WhenDying()
@@ -92,6 +123,15 @@ public class PlayerController : MonoBehaviour
         {
             transform.Translate(movValue * dashPower * Time.deltaTime);
             yield return null;
+        }
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (isReflecting)
+        {
+            bulletCount++;
+            angles.Add(col.gameObject.transform.eulerAngles.y + 180f);
         }
     }
 }

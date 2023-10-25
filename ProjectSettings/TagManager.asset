@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Enemy
+  - Player Damage
+  - Enemy Damage
   layers:
   - Default
   - TransparentFX
@@ -14,8 +18,8 @@ TagManager:
   - Ground
   - Player
   - Enemies
-  - Bullets
-  - 
+  - Player Damage
+  - Enemy Damage
   - 
   - 
   - 

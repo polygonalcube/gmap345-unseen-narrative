@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DefaultBullet : MonoBehaviour
 {
+    public HPComponent hp;
     public MoveComponent mover;
     
     void Start()
@@ -14,5 +15,13 @@ public class DefaultBullet : MonoBehaviour
     void Update()
     {
         mover.MoveAngularly(transform.forward);
+        if (hp != null)
+        {
+            if (hp.health <= 0)
+            {
+                hp.health = 1;
+                this.gameObject.SetActive(false);
+            }
+        }
     }
 }

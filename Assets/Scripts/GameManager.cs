@@ -56,15 +56,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public GameObject RetrieveBullet(Vector3 activationPosition)
+    public GameObject RetrieveBullet(Vector3 activationPosition, string newTag = "Enemy Damage")
     {
         int i = 0;
         while (i < bulletPool.Length)
         {
             if (!bulletPool[i].activeSelf)
             {
-                bulletPool[i].SetActive(true);
                 bulletPool[i].transform.position = activationPosition;
+                bulletPool[i].tag = newTag;
+                bulletPool[i].SetActive(true);
                 return bulletPool[i];
                 break;
             }
