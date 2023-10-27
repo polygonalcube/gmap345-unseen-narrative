@@ -113,8 +113,6 @@ GameObject:
   - component: {fileID: 6725986550011049548}
   - component: {fileID: 4475275220869900625}
   - component: {fileID: 6174778655460634708}
-  - component: {fileID: -3807212327357648711}
-  - component: {fileID: 7823822606255172621}
   m_Layer: 9
   m_Name: Popper
   m_TagString: Untagged
@@ -249,42 +247,3 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.6
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!114 &-3807212327357648711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5447021630714438213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e9a79bae4cc040ebac43e428c965fe0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: {fileID: 0}
-  layers:
-    serializedVersion: 2
-    m_Bits: 0
-  tags:
-  - Player Damage
-  damageOverride: 0
-  immediateDeath: 1
-  hasIFrames: 0
-  iSeconds: 0
-  iSecondsSet: 0
-  meshRen: {fileID: 0}
-  active: 1
---- !u!114 &7823822606255172621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5447021630714438213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f2bb829d57ef2d3ab1a33ee2d75de68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  maxHealth: 1
