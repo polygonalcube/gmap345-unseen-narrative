@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerLogic : MonoBehaviour
 {
     public HPComponent hp;
     public HurtComponent hbox;
@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private float dashPower = 40f;
     private float dashTime = 0.2f;
     private float dashCooldown = 1f;
+
+    public GameObject camZone;
 
     void OnEnable()
     {
@@ -132,6 +134,10 @@ public class PlayerController : MonoBehaviour
         {
             bulletCount++;
             angles.Add(col.gameObject.transform.eulerAngles.y + 180f);
+        }
+        if (col.gameObject.tag == "Camera Zone")
+        {
+            camZone = col.gameObject;
         }
     }
 }

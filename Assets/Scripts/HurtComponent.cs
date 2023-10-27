@@ -27,16 +27,19 @@ public class HurtComponent : MonoBehaviour
             iSeconds -= Time.deltaTime;
             if (iSeconds > 0f)
             {
-                if (meshRen.activeSelf)
+                if (meshRen != null)
                 {
-                    meshRen.SetActive(false);
-                }
-                else
-                {
-                    meshRen.SetActive(true);
+                    if (meshRen.activeSelf)
+                    {
+                        meshRen.SetActive(false);
+                    }
+                    else
+                    {
+                        meshRen.SetActive(true);
+                    }
                 }
             }
-            else
+            else if (meshRen != null)
             {
                 meshRen.SetActive(true);
             }

@@ -26,13 +26,19 @@ public class CameraLogic : MonoBehaviour
     {
         if (player != null)
         {
-            if (player.TryGetComponent<MoveComponent>(out MoveComponent mover))
+            if (player.GetComponent<PlayerLogic>().camZone != null)
+            {
+                Vector3 camZone = player.GetComponent<PlayerLogic>().camZone.transform.position;
+                target = new Vector3(camZone.x, transform.position.y, camZone.z);
+            }
+            else if (player.TryGetComponent<MoveComponent>(out MoveComponent mover))
             {
                 target = new Vector3(player.transform.position.x + mover.xSpeed * speedMultiplier, transform.position.y, 
                 player.transform.position.z + mover.zSpeed * speedMultiplier);
 
-                transform.position = Vector3.SmoothDamp(transform.position, target + offset, ref refVelocity, smoothTime, maxSpeed);
+                
             }
+            transform.position = Vector3.SmoothDamp(transform.position, target + offset, ref refVelocity, smoothTime, maxSpeed);
         }
     }
 }
