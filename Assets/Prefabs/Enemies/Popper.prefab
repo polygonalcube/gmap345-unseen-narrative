@@ -109,6 +109,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3933684025593835905}
   - component: {fileID: 7668832334425158946}
+  - component: {fileID: 4931335381604936471}
+  - component: {fileID: -4234723045207131108}
   - component: {fileID: 8353354272224218806}
   - component: {fileID: 6725986550011049548}
   - component: {fileID: 4475275220869900625}
@@ -156,6 +158,45 @@ MonoBehaviour:
   shootTime: 2
   stateTimer: 0
   state: 1
+--- !u!114 &4931335381604936471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5447021630714438213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f2bb829d57ef2d3ab1a33ee2d75de68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  maxHealth: 1
+--- !u!114 &-4234723045207131108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5447021630714438213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9a79bae4cc040ebac43e428c965fe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: {fileID: 4931335381604936471}
+  layers:
+    serializedVersion: 2
+    m_Bits: 0
+  tags:
+  - Player Damage
+  damageOverride: 0
+  immediateDeath: 1
+  hasIFrames: 0
+  iSeconds: 0
+  iSecondsSet: 0
+  meshRen: {fileID: 0}
+  active: 1
 --- !u!114 &8353354272224218806
 MonoBehaviour:
   m_ObjectHideFlags: 0
