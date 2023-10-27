@@ -16,6 +16,7 @@ public class HurtComponent : MonoBehaviour
     public float iSeconds = 0f;
     public float iSecondsSet;
     public GameObject meshRen;
+    public GameObject sprRen;
 
     public bool active = true;
 
