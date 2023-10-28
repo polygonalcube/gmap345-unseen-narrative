@@ -35,8 +35,6 @@ public class CameraLogic : MonoBehaviour
             {
                 target = new Vector3(player.transform.position.x + mover.xSpeed * speedMultiplier, transform.position.y, 
                 player.transform.position.z + mover.zSpeed * speedMultiplier);
-
-                
             }
             transform.position = Vector3.SmoothDamp(transform.position, target + offset, ref refVelocity, smoothTime, maxSpeed);
         }
