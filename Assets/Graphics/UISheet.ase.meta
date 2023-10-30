@@ -1,0 +1,452 @@
+fileFormatVersion: 2
+guid: d2824c9cfe3c64f4b96a895f83b2ebfa
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 0
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 0
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638342730633706007
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: CleanMask
+    originalName: 
+    pivot: {x: 1.6346154, y: -0.11764706}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 86
+      width: 52
+      height: 34
+    spriteID: 20e22cbe0652b1944aa8dc11e35403bf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 86}
+  - name: DeadMask
+    originalName: 
+    pivot: {x: 0.5192308, y: -0.11764706}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 128
+      width: 52
+      height: 34
+    spriteID: f0d39caaeba3e6d48a638cee5f3a235c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 128}
+  - name: Blood
+    originalName: 
+    pivot: {x: 0.45238099, y: -0.15625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 214
+      width: 42
+      height: 32
+    spriteID: cd680834a8f62a54c8d4dbb6b3d8c5d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 214}
+  - name: Skull
+    originalName: 
+    pivot: {x: -0.7021277, y: -0.11111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 170
+      width: 47
+      height: 36
+    spriteID: 47b4c937898e69f4a8e8d305290b96ec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 170}
+  - name: Details
+    originalName: 
+    pivot: {x: -0.49122804, y: -0.10810811}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 57
+      height: 74
+    spriteID: 1acb52ffeaefa4743966411bba59d10f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Clear
+    originalName: 
+    pivot: {x: 0.26666665, y: -1.3666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 69
+      y: 4
+      width: 30
+      height: 30
+    spriteID: 3d41fc05197702142aa6620b4d8227d3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 69, y: 4}
+  - name: TimeManip
+    originalName: 
+    pivot: {x: 1.4666666, y: -1.3666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 69
+      y: 42
+      width: 30
+      height: 30
+    spriteID: 41ce1972f01f32045b4950900c093da3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 69, y: 42}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1016289903
+    name: CleanMask
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: CleanMask
+      frameIndex: 0
+      cellRect:
+        x: 5
+        y: 4
+        width: 52
+        height: 34
+      spriteId: 20e22cbe0652b1944aa8dc11e35403bf
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 1
+    guid: 701486238
+    name: DamagedMask
+    layerFlags: 3
+    layerType: 1
+    blendMode: 0
+    cells: []
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 2
+    guid: 1150495478
+    name: DeadMask
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: DeadMask
+      frameIndex: 0
+      cellRect:
+        x: 63
+        y: 4
+        width: 52
+        height: 34
+      spriteId: f0d39caaeba3e6d48a638cee5f3a235c
+    linkedCells: []
+    parentIndex: 1
+  - layerIndex: 3
+    guid: 893377441
+    name: Blood
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Blood
+      frameIndex: 0
+      cellRect:
+        x: 71
+        y: 5
+        width: 42
+        height: 32
+      spriteId: cd680834a8f62a54c8d4dbb6b3d8c5d8
+    linkedCells: []
+    parentIndex: 1
+  - layerIndex: 4
+    guid: 1402920704
+    name: Dead
+    layerFlags: 3
+    layerType: 1
+    blendMode: 0
+    cells: []
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 5
+    guid: 1520891552
+    name: Skull
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Skull
+      frameIndex: 0
+      cellRect:
+        x: 123
+        y: 4
+        width: 47
+        height: 36
+      spriteId: 47b4c937898e69f4a8e8d305290b96ec
+    linkedCells: []
+    parentIndex: 4
+  - layerIndex: 6
+    guid: -1524872554
+    name: Details
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Details
+      frameIndex: 0
+      cellRect:
+        x: 118
+        y: 8
+        width: 57
+        height: 74
+      spriteId: 1acb52ffeaefa4743966411bba59d10f
+    linkedCells: []
+    parentIndex: 4
+  - layerIndex: 7
+    guid: -1176131550
+    name: Clear
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Clear
+      frameIndex: 0
+      cellRect:
+        x: 82
+        y: 41
+        width: 30
+        height: 30
+      spriteId: 3d41fc05197702142aa6620b4d8227d3
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 8
+    guid: -1650033524
+    name: TimeManip
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: TimeManip
+      frameIndex: 0
+      cellRect:
+        x: 46
+        y: 41
+        width: 30
+        height: 30
+      spriteId: 41ce1972f01f32045b4950900c093da3
+    linkedCells: []
+    parentIndex: -1
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 180, y: 90}
