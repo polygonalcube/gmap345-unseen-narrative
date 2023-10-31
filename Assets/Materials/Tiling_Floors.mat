@@ -65,7 +65,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SideTexture:
-        m_Texture: {fileID: 2800000, guid: ba1658a31ce20564294d447b25ef6c8a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2a3b151cf991dac4cbc4d00f09d07f91, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -73,7 +73,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TopTexture:
-        m_Texture: {fileID: 2800000, guid: ba1658a31ce20564294d447b25ef6c8a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2a3b151cf991dac4cbc4d00f09d07f91, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -113,7 +113,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Scale: 1
+    - _Scale: 0.333333
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
