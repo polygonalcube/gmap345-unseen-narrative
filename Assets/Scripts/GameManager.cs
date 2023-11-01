@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 
     public SpawningComponent spawner;
     public GameObject[] bulletPool = new GameObject[1000];
+
+    public float timeSlowMulti = 1f;
+    public float timeSlowMultiSet = 0.25f;
     
     void Awake() //Allows for Singleton.
     {

@@ -2777,6 +2777,16 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
   isReflecting: 0
+  timeSlow:
+    m_Name: Time Slow
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: fd0ccc84-2b5b-4aa0-b9d9-decda540c288
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  isSlowing: 0
   camZone: {fileID: 0}
 --- !u!135 &1235352767
 SphereCollider:
@@ -5469,6 +5479,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  timeSlowMulti: 1
+  timeSlowMultiSet: 0.25
 --- !u!4 &1951624987
 Transform:
   m_ObjectHideFlags: 0

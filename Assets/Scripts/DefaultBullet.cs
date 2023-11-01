@@ -6,15 +6,11 @@ public class DefaultBullet : MonoBehaviour
 {
     public HPComponent hp;
     public MoveComponent mover;
-    
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
-        mover.MoveAngularly(transform.forward);
+        mover.MoveAngularly(transform.forward * GameManager.gm.timeSlowMulti);
+        
         if (hp != null)
         {
             if (hp.health <= 0)

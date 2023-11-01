@@ -21,6 +21,9 @@ public class PlayerLogic : MonoBehaviour
     int bulletCount;
     List<float> angles = new List<float>();
 
+    public InputAction timeSlow;
+    public bool isSlowing;
+
     private bool canDash = true;
     private bool isDashing;
     private float dashPower = 40f;
@@ -33,12 +36,14 @@ public class PlayerLogic : MonoBehaviour
     {
         movement.Enable();
         reflect.Enable();
+        timeSlow.Enable();
     }
 
     void OnDisable()
     {
         movement.Disable();
         reflect.Disable();
+        timeSlow.Disable();
     }
 
     void Start()
@@ -78,6 +83,7 @@ public class PlayerLogic : MonoBehaviour
         movValue = new Vector3(movValue.x, 0f, movValue.y);
 
         isReflecting = (reflect.ReadValue<float>() == 1f);
+        isSlowing = (timeSlow.ReadValue<float>() == 1f);
     }
 
     void Reflect()

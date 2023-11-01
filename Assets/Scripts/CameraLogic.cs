@@ -6,7 +6,6 @@ public class CameraLogic : MonoBehaviour
 {
     GameObject player;
     
-    
     //float zoom = 0f;
     //public float zoomMultiplier = 1f;
     Vector3 target = Vector3.zero;

@@ -43,16 +43,14 @@ public class EnemyPopper : EnemyBaseClass
                         {
                             transform.eulerAngles = new Vector3(0f, AngleToObject(new Vector2(transform.position.x, transform.position.z), 
                             new Vector2(player.transform.position.x, player.transform.position.z)), 0f);
-                            mover.MoveAngularly(transform.forward);
-                            transform.eulerAngles = Vector3.zero;
                         }
                         else
                         {
                             transform.eulerAngles = new Vector3(0f, AngleToObject(new Vector2(transform.position.x, transform.position.z), 
                             new Vector2(player.transform.position.x, player.transform.position.z)) + 180f, 0f);
-                            mover.MoveAngularly(transform.forward);
-                            transform.eulerAngles = Vector3.zero;
                         }
+                        mover.MoveAngularly(transform.forward * GameManager.gm.timeSlowMulti);
+                        transform.eulerAngles = Vector3.zero;
                     }
                     else
                     {
