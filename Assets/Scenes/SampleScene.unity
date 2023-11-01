@@ -2907,7 +2907,15 @@ MonoBehaviour:
     m_Id: fd0ccc84-2b5b-4aa0-b9d9-decda540c288
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings: []
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 8fc0a803-148e-4859-908d-580e514616c8
+      m_Path: <Keyboard>/l
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Time Slow
+      m_Flags: 0
     m_Flags: 0
   isSlowing: 0
   camZone: {fileID: 0}

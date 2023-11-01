@@ -63,6 +63,7 @@ public class PlayerLogic : MonoBehaviour
             Movement();
         }
         Reflect();
+        SlowTime();
         //WhenDying();
     }
 
@@ -105,6 +106,15 @@ public class PlayerLogic : MonoBehaviour
             }
             bulletCount = 0;
             angles.Clear();
+        }
+    }
+
+    void SlowTime()
+    {
+        GameManager.gm.timeSlowMulti = 1f;
+        if (isSlowing)
+        {
+            GameManager.gm.timeSlowMulti = GameManager.gm.timeSlowMultiSet;
         }
     }
     /*
