@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
                 bulletPool[i].tag = newTag;
                 bulletPool[i].SetActive(true);
                 return bulletPool[i];
-                break;
+                //break;
             }
             i++;
         }

@@ -24,13 +24,15 @@ public class PlayerLogic : MonoBehaviour
     public InputAction timeSlow;
     public bool isSlowing;
 
-    private bool canDash = true;
-    private bool isDashing;
-    private float dashPower = 40f;
-    private float dashTime = 0.2f;
-    private float dashCooldown = 1f;
+    public bool canDash = true;
+    public bool isDashing;
+    public float dashPower = 40f;
+    public float dashTime = 0.2f;
+    public float dashCooldown = 1f;
 
     public GameObject camZone;
+
+    public ParticleSystem dashParticles;
 
     void OnEnable()
     {
@@ -49,6 +51,7 @@ public class PlayerLogic : MonoBehaviour
     void Start()
     {
         bulletCount = 0;
+        
     }
 
     void Update()
@@ -69,7 +72,7 @@ public class PlayerLogic : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+
     }
 
     void Movement()
@@ -140,8 +143,18 @@ public class PlayerLogic : MonoBehaviour
         while (Time.time < startTime + dashTime) 
         {
             transform.Translate(movValue * dashPower * Time.deltaTime);
+            var em = dashParticles.emission;
+            var dur = dashParticles.duration;
+            em.enabled = true;
+            Invoke(nameof(DisableDashDust), dur);
             yield return null;
         }
+    }
+
+    void DisableDashDust()
+    {
+        var em = dashParticles.emission;
+        em.enabled = false;
     }
 
     void OnTriggerEnter(Collider col)
