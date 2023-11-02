@@ -10,6 +10,8 @@ public class UI_Script : MonoBehaviour
     public Image healthMask;
     public Sprite healthy;
     public Sprite hurt;
+    public GameObject deathMenu; 
+    public GameObject pauseMenu;
     
     void Start()
     {
@@ -26,6 +28,11 @@ public class UI_Script : MonoBehaviour
         else
         {
             healthMask.sprite = healthy;
+        }
+
+        if (player.GetComponent <HPComponent>().health == 0) 
+        {
+            deathMenu.SetActive(true);
         }
     }
 }
