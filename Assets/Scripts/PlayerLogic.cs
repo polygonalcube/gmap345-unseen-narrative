@@ -28,7 +28,9 @@ public class PlayerLogic : MonoBehaviour
     public bool isDashing;
     public float dashPower = 40f;
     public float dashTime = 0.2f;
-    public float dashCooldown = 1f;
+    public float dashCooldown = 10f;
+    public float totemCooldown = 6f;
+    public bool totemActive = true;
 
     public GameObject camZone;
 
@@ -57,7 +59,7 @@ public class PlayerLogic : MonoBehaviour
     void Update()
     {
         ReceiveInput();
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && (canDash == true))
         {
             StartCoroutine(Dash());
         }
@@ -115,6 +117,7 @@ public class PlayerLogic : MonoBehaviour
     void SlowTime()
     {
         GameManager.gm.timeSlowMulti = 1f;
+
         if (isSlowing)
         {
             GameManager.gm.timeSlowMulti = GameManager.gm.timeSlowMultiSet;
@@ -138,17 +141,22 @@ public class PlayerLogic : MonoBehaviour
 
     private IEnumerator Dash()
     {
-        
+
         float startTime = Time.time;
         while (Time.time < startTime + dashTime) 
         {
+            isDashing = true;
+            canDash = false;
             transform.Translate(movValue * dashPower * Time.deltaTime);
             var em = dashParticles.emission;
             var dur = dashParticles.duration;
             em.enabled = true;
             Invoke(nameof(DisableDashDust), dur);
+            isDashing = false;
             yield return null;
         }
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 
     void DisableDashDust()

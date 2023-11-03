@@ -33,6 +33,26 @@ public class UI_Script : MonoBehaviour
         if (player.GetComponent <HPComponent>().health == 0) 
         {
             deathMenu.SetActive(true);
+            Time.timeScale = 0f;
         }
+
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            if (pauseMenu.activeInHierarchy == false)
+            {
+                pauseMenu.SetActive(true);
+                Time.timeScale = 0f;
+            }
+            else
+            {
+                Resume();
+            }
+        }
+    }
+
+    public void Resume()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
