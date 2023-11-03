@@ -9642,6 +9642,46 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Movement
       m_Flags: 8
+    - m_Name: Xbox
+      m_Id: 2a7606fe-43d5-45be-b4c4-38cb4de768e1
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 5a580dbe-a8e8-4472-a188-83a0fa585eec
+      m_Path: <Gamepad>/leftStick/up
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: down
+      m_Id: f7b3847a-a8f1-41c4-92a7-fd75d541132d
+      m_Path: <Gamepad>/leftStick/down
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: left
+      m_Id: a8ef8b2e-a216-4bd1-9c81-31b92df6e32a
+      m_Path: <Gamepad>/leftStick/left
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: right
+      m_Id: d5031a79-2022-4c20-9525-6bb37dc70b84
+      m_Path: <Gamepad>/leftStick/right
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
     m_Flags: 0
   reflect:
     m_Name: Reflect
@@ -9758,7 +9798,7 @@ MonoBehaviour:
   hasIFrames: 1
   iSeconds: 0
   iSecondsSet: 3
-  meshRen: {fileID: 0}
+  meshRen: {fileID: 626547169}
   sprRen: {fileID: 0}
   active: 1
 --- !u!114 &1235352770
