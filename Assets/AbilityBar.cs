@@ -5,28 +5,38 @@ using UnityEngine.UI;
 
 public class AbilityBar : MonoBehaviour
 {
-    // Start is called before the first frame update
     public float sliderValue;
+    public float minValue = 0f;
+    public float maxValue = 3f;
+    public float timeEdit; /* Change this value to change how fast the bar fills*/
     public Slider slider;
     public GameObject player;
 
+
     void Start()
     {
-        
+        slider.maxValue = maxValue;
+        slider.minValue = minValue;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player.GetComponent<PlayerLogic>().canDash == false)
+        if (player.GetComponent<PlayerLogic>().canDash == true)
         {
-            sliderValue = Time.deltaTime;
-            slider.value = sliderValue;
+            slider.value = 0f;
+            sliderValue = 0f;
         }
         else
         {
-            slider.enabled = false;
+            BarFill();
         }
-        
+
+    }
+
+    void BarFill()
+    {
+        slider.value = Mathf.Lerp(slider.minValue, slider.maxValue, sliderValue);
+        sliderValue += Time.deltaTime * timeEdit;
     }
 }
