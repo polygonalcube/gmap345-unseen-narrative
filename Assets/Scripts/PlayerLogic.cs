@@ -21,16 +21,17 @@ public class PlayerLogic : MonoBehaviour
     int bulletCount;
     List<float> angles = new List<float>();
 
-    public InputAction timeSlow;
+    public InputAction totemPower;
     public bool isSlowing;
+    public bool totemActive = true;
+    public float totemCooldown = 6f;
 
     public bool canDash = true;
     public bool isDashing;
     public float dashPower = 40f;
     public float dashTime = 0.2f;
-    public float dashCooldown = 10f;
-    public float totemCooldown = 6f;
-    public bool totemActive = true;
+    public float dashCooldown = 3f;
+    
 
     public GameObject camZone;
 
@@ -40,14 +41,14 @@ public class PlayerLogic : MonoBehaviour
     {
         movement.Enable();
         reflect.Enable();
-        timeSlow.Enable();
+        totemPower.Enable();
     }
 
     void OnDisable()
     {
         movement.Disable();
         reflect.Disable();
-        timeSlow.Disable();
+        totemPower.Disable();
     }
 
     void Start()
@@ -89,7 +90,7 @@ public class PlayerLogic : MonoBehaviour
         movValue = new Vector3(movValue.x, 0f, movValue.y);
 
         isReflecting = (reflect.ReadValue<float>() == 1f);
-        isSlowing = (timeSlow.ReadValue<float>() == 1f);
+        isSlowing = (totemPower.ReadValue<float>() == 1f);
     }
 
     void Reflect()
@@ -121,7 +122,9 @@ public class PlayerLogic : MonoBehaviour
         if (isSlowing)
         {
             GameManager.gm.timeSlowMulti = GameManager.gm.timeSlowMultiSet;
+            StartCoroutine(TotemCooldown());
         }
+        
     }
     /*
     void WhenDying()
@@ -157,6 +160,13 @@ public class PlayerLogic : MonoBehaviour
         }
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
+    }
+
+    IEnumerator TotemCooldown()
+    {
+        totemActive = false;
+        yield return new WaitForSeconds(totemCooldown);
+        totemActive = true;
     }
 
     void DisableDashDust()
