@@ -6,12 +6,13 @@ public class Boss1 : EnemyBaseClass
 {
     //public MoveComponent mover;
     public ShootingComponent[] shooters;
+
+    public Transform[] hands;
     Animator anim;
 
-    public float idleTime = 0f;
+    public float[] stateTimes = new float[6];
 
     public Vector2 idealDist = new Vector2(3f, 5f);
-    public float shootTime = 0f;
     public float stateTimer = 0f;
 
     public enum States
@@ -23,45 +24,64 @@ public class Boss1 : EnemyBaseClass
         TIMEOUT,
         DEATH
     }
-    public States state = States.TIMEOUT;
+    public States state = States.IDLE;
     
-    void Start()
+    public override void Start()
     {
+        base.Start();
         anim = GetComponent<Animator>();
     }
 
-    void Update()
+    public override void Update()
     {
+        base.Update();
         if (player != null)
         {
+            stateTimer += Time.deltaTime;
             switch(state)
             {
                 case States.IDLE:
-                    //anim.Play("Idle");
-                    stateTimer += Time.deltaTime;
-                    if (stateTimer > idleTime)
+                    anim.Play("Idle");
+                    if (stateTimer > stateTimes[0])
                     {
                         stateTimer = 0f;
-                        state = States.TIMEOUT;
+                        state = States.CROSSFIRE;
                     }
                     break;
-                case States.TIMEOUT:
-                    //anim.Play("Crossfire");
-                    stateTimer += Time.deltaTime;
-                    if (stateTimer > shootTime)
+                case States.CROSSFIRE:
+                    anim.Play("Crossfire");
+                    if (stateTimer > stateTimes[2])
                     {
                         stateTimer = 0f;
                         state = States.IDLE;
                     }
-                    else
+                    for (int i = 0; i < shooters.Length; i++)
                     {
-                        for (int i = 0; i < shooters.Length; i++)
-                        {
-                            shooters[i].Shoot(transform.position, positionOffset: Vector3.zero, 
-                            shotDirection: new Vector3(0f, (AngleToObject(new Vector2(transform.position.x, transform.position.z), 
-                            new Vector2(player.transform.position.x, player.transform.position.z))/* + Random.Range(-2f, 2f)*/), 0f), 
-                            targetPosition: player.transform.position);
-                        }
+                        shooters[i].Shoot(hands[i].position, positionOffset: Vector3.zero, 
+                        shotDirection: new Vector3(0f, hands[i].eulerAngles.y + 180f, 0f), 
+                        targetPosition: player.transform.position);
+                    }
+                    break;
+                case States.TIMEOUT:
+                    anim.Play("Idle");
+                    if (stateTimer > stateTimes[4])
+                    {
+                        stateTimer = 0f;
+                        state = States.DEATH;
+                    }
+                    for (int i = 0; i < shooters.Length; i++)
+                    {
+                        shooters[i].Shoot(hands[i].position, positionOffset: Vector3.zero, 
+                        shotDirection: new Vector3(0f, (AngleToObject(new Vector2(transform.position.x, transform.position.z), 
+                        new Vector2(player.transform.position.x, player.transform.position.z)) + Random.Range(-15f, 15f)), 0f), 
+                        targetPosition: player.transform.position);
+                    }
+                    break;
+                case States.DEATH:
+                    if (stateTimer > stateTimes[5])
+                    {
+                        stateTimer = 0f;
+                        state = States.DEATH;
                     }
                     break;
             }

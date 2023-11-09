@@ -21,8 +21,9 @@ public class EnemyPopper : EnemyBaseClass
     }
     public States state = States.MOVE;
 
-    void Update()
+    public override void Update()
     {
+        base.Update();
         if (player != null)
         {
             switch(state)

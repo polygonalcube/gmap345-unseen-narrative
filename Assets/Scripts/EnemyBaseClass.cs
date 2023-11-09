@@ -7,9 +7,17 @@ public class EnemyBaseClass : MonoBehaviour
     public float addAngle = 90f;
     protected GameObject player;
 
-    void Start()
+    public virtual void Start()
     {
         player = GameObject.Find("Player");
+    }
+
+    public virtual void Update()
+    {
+        if (player == null)
+        {
+            player = GameObject.Find("Player");
+        }
     }
 
     protected float AngleToObject(Vector2 from, Vector2 to)

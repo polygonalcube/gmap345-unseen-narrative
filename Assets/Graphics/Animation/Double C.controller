@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -1978303741906493279, guid: 85a7e08c714c661b1a8aa30bcb0f8b54,
+  m_Motion: {fileID: -1978303741906493279, guid: fc1d6c14afab1da05a4221893275da05,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -85,7 +85,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Crossfire
-  m_Speed: 1
+  m_Speed: 0.33
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -97,7 +97,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -3144743056023700918, guid: 85a7e08c714c661b1a8aa30bcb0f8b54,
+  m_Motion: {fileID: -3144743056023700918, guid: fc1d6c14afab1da05a4221893275da05,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -124,7 +124,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -8973869121326271518, guid: 85a7e08c714c661b1a8aa30bcb0f8b54,
+  m_Motion: {fileID: -8973869121326271518, guid: fc1d6c14afab1da05a4221893275da05,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
