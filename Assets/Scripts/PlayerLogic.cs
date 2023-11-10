@@ -53,6 +53,8 @@ public class PlayerLogic : MonoBehaviour
 
     void Start()
     {
+        var em = dashParticles.emission;
+        em.enabled = false;
         bulletCount = 0;
         
     }
