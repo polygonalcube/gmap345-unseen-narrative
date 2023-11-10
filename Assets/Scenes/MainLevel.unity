@@ -7734,7 +7734,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     startSize:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 0
       scalar: 1
       minScalar: 0.5
       maxCurve:
@@ -7787,7 +7787,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 0
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -7840,7 +7840,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 0
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -8482,7 +8482,7 @@ ParticleSystem:
       repeatInterval: 0.01
       probability: 1
   SizeModule:
-    enabled: 1
+    enabled: 0
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -8874,8 +8874,8 @@ ParticleSystem:
         m_NumAlphaKeys: 2
   UVModule:
     serializedVersion: 2
-    enabled: 0
-    mode: 0
+    enabled: 1
+    mode: 1
     timeMode: 0
     fps: 30
     frameOverTime:
@@ -8993,7 +8993,14 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 0}
+    - sprite: {fileID: 6654388679546751379, guid: ce2df68bede8978488d5393376c07fd3,
+        type: 3}
+    - sprite: {fileID: 7327143417578922022, guid: ce2df68bede8978488d5393376c07fd3,
+        type: 3}
+    - sprite: {fileID: 7638227551470097653, guid: ce2df68bede8978488d5393376c07fd3,
+        type: 3}
+    - sprite: {fileID: -6208192049912219421, guid: ce2df68bede8978488d5393376c07fd3,
+        type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -9581,7 +9588,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    inWorldSpace: 0
+    inWorldSpace: 1
   InheritVelocityModule:
     enabled: 1
     m_Mode: 1
@@ -9919,7 +9926,7 @@ ParticleSystem:
       m_Bits: 4294967295
     influenceList: []
   ClampVelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -12470,7 +12477,7 @@ MonoBehaviour:
   totemCooldown: 6
   canDash: 1
   isDashing: 0
-  dashPower: 70
+  dashPower: 35
   dashTime: 0.2
   dashCooldown: 4
   camZone: {fileID: 0}

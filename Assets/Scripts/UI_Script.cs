@@ -59,7 +59,7 @@ public class UI_Script : MonoBehaviour
 
     public void SwapScene(string SceneName)
     {
-        SceneManager.LoadScene(SceneName);
+        SceneManager.LoadSceneAsync(SceneName);
     }
 
     public void QuitGame()

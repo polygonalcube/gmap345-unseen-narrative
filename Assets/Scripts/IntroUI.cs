@@ -9,7 +9,8 @@ public class IntroUI : MonoBehaviour
     
     public void SwapScene( string SceneName)
     {
-        SceneManager.LoadScene(SceneName);
+        SceneManager.LoadSceneAsync(SceneName, LoadSceneMode.Single);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(SceneName));
     }
 
     public void QuitGame()
