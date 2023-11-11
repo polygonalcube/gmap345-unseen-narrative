@@ -10,6 +10,7 @@ public class DefaultBullet : MonoBehaviour
     void Update()
     {
         mover.MoveAngularly(transform.forward * GameManager.gm.timeSlowMulti);
+        mover.ResetY();
         
         if (hp != null)
         {
