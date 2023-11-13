@@ -12,18 +12,19 @@ public class Boss1 : EnemyBaseClass
 
     public float[] stateTimes = new float[7];
 
+    public float swipeDist = 1f;
     public float idealDist = 6f;
     public float stateTimer = 0f;
 
     public enum States
     {
-        IDLE,
-        MOVE,
-        SWIPE,
-        CROSSFIRE,
-        EXPLOSION,
-        TIMEOUT,
-        DEATH
+        IDLE, //1
+        MOVE, //3
+        SWIPE, //1
+        CROSSFIRE, //2
+        EXPLOSION, //5
+        TIMEOUT, //30
+        DEATH //3
     }
     public States state = States.IDLE;
     
@@ -46,7 +47,14 @@ public class Boss1 : EnemyBaseClass
                     if (stateTimer > stateTimes[0])
                     {
                         stateTimer = 0f;
-                        state = States.CROSSFIRE;
+                        if (CheckPlayerDistance())
+                        {
+                            state = States.SWIPE;
+                        }
+                        else
+                        {
+                            state = States.CROSSFIRE;
+                        }
                     }
                     break;
                 case States.MOVE:
@@ -75,7 +83,11 @@ public class Boss1 : EnemyBaseClass
                     if (stateTimer > stateTimes[3])
                     {
                         stateTimer = 0f;
-                        if (Random.Range(0, 2) % 2 == 0)
+                        if (CheckPlayerDistance())
+                        {
+                            state = States.SWIPE;
+                        }
+                        else if (Random.Range(0, 2) % 2 == 0)
                         {
                             state = States.IDLE;
                         }
@@ -87,13 +99,13 @@ public class Boss1 : EnemyBaseClass
                     for (int i = 0; i < shooters.Length; i++)
                     {
                         shooters[i].Shoot(hands[i].position, positionOffset: Vector3.zero, 
-                        shotDirection: new Vector3(0f, 0f, hands[i].eulerAngles.y + 180f), 
+                        shotDirection: new Vector3(0f, hands[i].eulerAngles.y + 180f, 0f), 
                         targetPosition: player.transform.position);
                     }
                     break;
                 case States.EXPLOSION:
                     anim.Play("Explosion");
-                    if (stateTimer > stateTimes[3])
+                    if (stateTimer > stateTimes[4])
                     {
                         stateTimer = 0f;
                         state = States.IDLE;
@@ -130,5 +142,10 @@ public class Boss1 : EnemyBaseClass
                     break;
             }
         }
+    }
+
+    bool CheckPlayerDistance()
+    {
+        return (Vector3.Distance(transform.position, player.transform.position) <= swipeDist);
     }
 }

@@ -75,16 +75,17 @@ MonoBehaviour:
   - {fileID: 473780620875732101}
   - {fileID: 3316779678537827724}
   hands:
-  - {fileID: 7114587187513987719}
-  - {fileID: 1160510806273041706}
+  - {fileID: 1769717465594224801}
+  - {fileID: 3148539424236913290}
   stateTimes:
   - 1
   - 3
   - 1
   - 2
-  - 20
-  - 99
-  - 99
+  - 5
+  - 30
+  - 3
+  swipeDist: 3
   idealDist: 6
   stateTimer: 0
   state: 0
@@ -240,9 +241,9 @@ MonoBehaviour:
   isRadial: 0
   isAlternating: 0
   onAlternativeCycle: 0
---- !u!4 &1160510806273041706 stripped
+--- !u!4 &1769717465594224801 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -1538112130698044685, guid: 5630cf1853d2d3aa8836c2e8aecb8d8f,
+  m_CorrespondingSourceObject: {fileID: -2147585971344744584, guid: 5630cf1853d2d3aa8836c2e8aecb8d8f,
     type: 3}
   m_PrefabInstance: {fileID: 8844349794675474393}
   m_PrefabAsset: {fileID: 0}
@@ -275,9 +276,9 @@ MonoBehaviour:
   isRadial: 0
   isAlternating: 0
   onAlternativeCycle: 0
---- !u!4 &7114587187513987719 stripped
+--- !u!4 &3148539424236913290 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -7493596028755563170, guid: 5630cf1853d2d3aa8836c2e8aecb8d8f,
+  m_CorrespondingSourceObject: {fileID: -3383141565121004205, guid: 5630cf1853d2d3aa8836c2e8aecb8d8f,
     type: 3}
   m_PrefabInstance: {fileID: 8844349794675474393}
   m_PrefabAsset: {fileID: 0}
