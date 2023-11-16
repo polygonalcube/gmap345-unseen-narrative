@@ -25,6 +25,7 @@ public class PlayerLogic : MonoBehaviour
     public bool isSlowing;
     public bool totemActive = true;
     public float totemCooldown = 6f;
+    public GameObject[] bullets;
 
     public bool canDash = true;
     public bool isDashing;
@@ -189,4 +190,15 @@ public class PlayerLogic : MonoBehaviour
             camZone = col.gameObject;
         }
     }
+
+    void WardClear()
+    {
+        bullets = GameObject.FindGameObjectsWithTag("Enemy Damage");
+
+        foreach (GameObject bullets in bullets)
+        {
+            bullets.SetActive(false);
+        }
+    }
+
 }
