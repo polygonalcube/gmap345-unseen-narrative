@@ -66,7 +66,7 @@ public class PlayerWeapon : MonoBehaviour
         else
         {
             col.enabled = false;
-            transform.localPosition = Vector3.SmoothDamp(transform.localPosition, new Vector3(-.8f, 0.2f, 0), ref refVelocity, smoothTime, maxSpeed);
+            transform.localPosition = Vector3.SmoothDamp(transform.localPosition, new Vector3(1.02f, 0.2f, 0), ref refVelocity, smoothTime, maxSpeed);
         }
     }
 }
