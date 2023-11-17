@@ -277,8 +277,8 @@ MonoBehaviour:
   pattern: {fileID: 0}
   spawner: {fileID: 0}
   speed: {x: 0, y: 0, z: 0}
-  angularSpeed: 6
-  shotDelaySet: 0.1
+  angularSpeed: 7
+  shotDelaySet: 0.01
   bulletCount: 1
   isSpread: 0
   spreadAngleSize: 45
@@ -312,8 +312,8 @@ MonoBehaviour:
   pattern: {fileID: 0}
   spawner: {fileID: 0}
   speed: {x: 0, y: 0, z: 0}
-  angularSpeed: 6
-  shotDelaySet: 0.1
+  angularSpeed: 7
+  shotDelaySet: 0.01
   bulletCount: 1
   isSpread: 0
   spreadAngleSize: 45

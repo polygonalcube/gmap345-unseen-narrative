@@ -73,12 +73,13 @@ public class PlayerLogic : MonoBehaviour
         }
         Reflect();
         SlowTime();
+        
         //WhenDying();
     }
 
     void FixedUpdate()
     {
-
+        Fall();
     }
 
     void Movement()
@@ -115,6 +116,14 @@ public class PlayerLogic : MonoBehaviour
             }
             bulletCount = 0;
             angles.Clear();
+        }
+    }
+
+    void Fall()
+    {
+        if (!Physics.Raycast(transform.position + (Vector3.up * .1f), Vector3.down))
+        {
+            hp.health = 0;
         }
     }
 

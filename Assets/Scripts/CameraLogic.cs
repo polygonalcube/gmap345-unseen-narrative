@@ -28,14 +28,18 @@ public class CameraLogic : MonoBehaviour
             if (player.GetComponent<PlayerLogic>().camZone != null)
             {
                 Vector3 camZone = player.GetComponent<PlayerLogic>().camZone.transform.position;
-                target = new Vector3(camZone.x, transform.position.y, camZone.z);
+                target = new Vector3(camZone.x + offset.x, offset.y, camZone.z + offset.z);
+                if (player.GetComponent<PlayerLogic>().camZone.transform.localScale.x > 1.5f)
+                {
+                    target = new Vector3(camZone.x + offset.x, offset.y * (player.GetComponent<PlayerLogic>().camZone.transform.localScale.x / 1.333f), camZone.z + offset.z);
+                }
             }
             else if (player.TryGetComponent<MoveComponent>(out MoveComponent mover))
             {
                 target = new Vector3(player.transform.position.x + mover.xSpeed * speedMultiplier, transform.position.y, 
                 player.transform.position.z + mover.zSpeed * speedMultiplier);
             }
-            transform.position = Vector3.SmoothDamp(transform.position, target + offset, ref refVelocity, smoothTime, maxSpeed);
+            transform.position = Vector3.SmoothDamp(transform.position, target, ref refVelocity, smoothTime, maxSpeed);
         }
     }
 }
