@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager gm;
 
     public SpawningComponent spawner;
-    public GameObject[] bulletPool = new GameObject[1000];
+    public GameObject[] bulletPool = new GameObject[10000];
 
     public float timeSlowMulti = 1f;
     public float timeSlowMultiSet = 0.25f;

@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerWeapon : MonoBehaviour
 {
     public HitComponent hit;
+    public Collider col;
     public InputAction attacking;
     public Vector3 atkValue = Vector3.zero;
 
@@ -16,6 +17,7 @@ public class PlayerWeapon : MonoBehaviour
     public float maxSpeed = Mathf.Infinity;
 
     public bool isAttacking = false;
+    public float attackRange = 1.5f;
 
     void OnEnable()
     {
@@ -29,7 +31,7 @@ public class PlayerWeapon : MonoBehaviour
 
     void Start()
     {
-        hit.enabled = true;
+        col.enabled = true;
     }
 
     void Update()
@@ -49,7 +51,7 @@ public class PlayerWeapon : MonoBehaviour
         if (atkValue != Vector3.zero)
         {
             isAttacking = true;
-            atkPos = atkValue * 2f;
+            atkPos = atkValue * attackRange;
         }
         else if (Vector3.Distance(transform.localPosition, atkPos) < 0.01f)
         {
@@ -58,12 +60,12 @@ public class PlayerWeapon : MonoBehaviour
 
         if (isAttacking)
         {
-            hit.enabled = true;
+            col.enabled = true;
             transform.localPosition = Vector3.SmoothDamp(transform.localPosition, atkPos, ref refVelocity, smoothTime, maxSpeed);
         }
         else
         {
-            hit.enabled = false;
+            col.enabled = false;
             transform.localPosition = Vector3.SmoothDamp(transform.localPosition, new Vector3(-.8f, 0.2f, 0), ref refVelocity, smoothTime, maxSpeed);
         }
     }

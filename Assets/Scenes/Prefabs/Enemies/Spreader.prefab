@@ -14,12 +14,12 @@ GameObject:
   - component: {fileID: 133881468276946447}
   - component: {fileID: 6001985444152567913}
   m_Layer: 0
-  m_Name: Test Enemy
+  m_Name: Spreader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1357957570401912591
 Transform:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3409121155444034824}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ac1168b76094757eb7e51ce26a316e5, type: 3}
   m_Name: 
@@ -83,7 +83,7 @@ MonoBehaviour:
   spawner: {fileID: 6065556577807198631}
   speed: {x: 0, y: 0, z: 0}
   angularSpeed: 10
-  shotDelaySet: 0.1
+  shotDelaySet: 0.3
   bulletCount: 2
   isSpread: 1
   spreadAngleSize: 60
@@ -106,7 +106,7 @@ MonoBehaviour:
   spawner: {fileID: 6065556577807198631}
   speed: {x: 0, y: 0, z: 0}
   angularSpeed: 5
-  shotDelaySet: 0.7
+  shotDelaySet: 1.5
   bulletCount: 5
   isSpread: 1
   spreadAngleSize: 60

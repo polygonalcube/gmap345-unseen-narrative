@@ -85,7 +85,7 @@ MonoBehaviour:
   - 5
   - 30
   - 3
-  swipeDist: 3
+  swipeDist: 5
   idealDist: 6
   stateTimer: 0
   state: 0
@@ -278,7 +278,7 @@ MonoBehaviour:
   spawner: {fileID: 0}
   speed: {x: 0, y: 0, z: 0}
   angularSpeed: 7
-  shotDelaySet: 0.01
+  shotDelaySet: 0
   bulletCount: 1
   isSpread: 0
   spreadAngleSize: 45
@@ -313,7 +313,7 @@ MonoBehaviour:
   spawner: {fileID: 0}
   speed: {x: 0, y: 0, z: 0}
   angularSpeed: 7
-  shotDelaySet: 0.01
+  shotDelaySet: 0
   bulletCount: 1
   isSpread: 0
   spreadAngleSize: 45
