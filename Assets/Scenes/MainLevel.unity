@@ -3930,7 +3930,7 @@ PrefabInstance:
     - target: {fileID: 6366128451445297232, guid: 0ab5e6e3d0d20764d826088e7504a4ac,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 6366128451445297232, guid: 0ab5e6e3d0d20764d826088e7504a4ac,
         type: 3}
@@ -13094,7 +13094,7 @@ MonoBehaviour:
   bullets: []
   canDash: 1
   isDashing: 0
-  dashPower: 70
+  dashPower: 140
   dashTime: 0.2
   dashCooldown: 4
   camZone: {fileID: 0}
@@ -13140,12 +13140,12 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 1
-  m_Radius: 0.5
+  m_Radius: 0.89
   m_SlopeLimit: 1
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.85, z: 0}
+  m_Center: {x: 0, y: 0.7, z: 0}
 --- !u!114 &1235352769
 MonoBehaviour:
   m_ObjectHideFlags: 0
