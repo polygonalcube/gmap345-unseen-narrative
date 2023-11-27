@@ -26,7 +26,7 @@ public class PlayerLogic : MonoBehaviour
     public bool totemActive = true;
     public float totemCooldown = 6f;
     public GameObject[] bullets;
-
+    public List<string> totemsHeld = new List<string>();
     public bool canDash = true;
     public bool isDashing;
     public float dashPower = 40f;
@@ -138,6 +138,12 @@ public class PlayerLogic : MonoBehaviour
         }
         
     }
+
+    void TotemPower()
+    {
+
+    }
+
     /*
     void WhenDying()
     {

@@ -22,8 +22,20 @@ public class PopupUIScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    private void OnEnable()
+    {
         uiDescription.text = currentDescription;
         uiName.text = currentName;
         uiImage = currentSprite;
+        StartCoroutine(HideUI());
+    }
+
+    IEnumerator HideUI()
+    {
+        yield return new WaitForSeconds(2);
+        gameObject.SetActive(false);
     }
 }

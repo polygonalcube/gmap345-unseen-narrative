@@ -10,6 +10,9 @@ public class PickupScript : MonoBehaviour
     public string itemDescription;
     public Image itemSprite;
     public GameObject UI;
+    public GameObject player;
+    public string totemRefName;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,8 @@ public class PickupScript : MonoBehaviour
             UI.GetComponent<PopupUIScript>().currentName = itemName;
             UI.GetComponent<PopupUIScript>().currentSprite = itemSprite;
             UI.SetActive(true);
+            player.GetComponent<PlayerLogic>().totemsHeld.Add(totemRefName);
+            Destroy(gameObject);
         }
     }
 

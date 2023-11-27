@@ -1089,6 +1089,11 @@ PrefabInstance:
       objectReference: {fileID: 1936797543}
     - target: {fileID: 478274043865641879, guid: 544038f2ac9880a4aa6e748e05ee978e,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1235352763}
+    - target: {fileID: 478274043865641879, guid: 544038f2ac9880a4aa6e748e05ee978e,
+        type: 3}
       propertyPath: itemName
       value: Ward of AAAAAAAAAAAA
       objectReference: {fileID: 0}
@@ -1102,6 +1107,11 @@ PrefabInstance:
       propertyPath: imageSprite
       value: 
       objectReference: {fileID: 669992162}
+    - target: {fileID: 478274043865641879, guid: 544038f2ac9880a4aa6e748e05ee978e,
+        type: 3}
+      propertyPath: totemRefName
+      value: ward
+      objectReference: {fileID: 0}
     - target: {fileID: 478274043865641879, guid: 544038f2ac9880a4aa6e748e05ee978e,
         type: 3}
       propertyPath: itemDescription
@@ -1125,7 +1135,7 @@ PrefabInstance:
     - target: {fileID: 3976463790560016257, guid: 544038f2ac9880a4aa6e748e05ee978e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5177398988450246623, guid: 544038f2ac9880a4aa6e748e05ee978e,
         type: 3}
@@ -14358,6 +14368,11 @@ PrefabInstance:
     - target: {fileID: 4555958233473885267, guid: 551958846dd28154480ef563742562f5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356598662748911703, guid: 551958846dd28154480ef563742562f5,
+        type: 3}
+      propertyPath: isReflecting
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
