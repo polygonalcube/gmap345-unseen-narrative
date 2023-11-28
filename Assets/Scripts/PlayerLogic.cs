@@ -22,11 +22,12 @@ public class PlayerLogic : MonoBehaviour
     List<float> angles = new List<float>();
 
     public InputAction totemPower;
+    public bool useTotem;
     public bool isSlowing;
     public bool totemActive = true;
     public float totemCooldown = 6f;
     public GameObject[] bullets;
-
+    public List<string> totemsHeld = new List<string>();
     public bool canDash = true;
     public bool isDashing;
     public float dashPower = 40f;
@@ -72,6 +73,7 @@ public class PlayerLogic : MonoBehaviour
             Movement();
         }
         Reflect();
+        TotemPower();
         SlowTime();
         
         //WhenDying();
@@ -94,7 +96,7 @@ public class PlayerLogic : MonoBehaviour
         movValue = new Vector3(movValue.x, 0f, movValue.y);
 
         isReflecting = (reflect.ReadValue<float>() == 1f);
-        isSlowing = (totemPower.ReadValue<float>() == 1f);
+        useTotem = (totemPower.ReadValue<float>() == 1f);
     }
 
     void Reflect()
@@ -138,6 +140,22 @@ public class PlayerLogic : MonoBehaviour
         }
         
     }
+
+    void TotemPower()
+    {
+        if (useTotem && totemActive == true)
+        {
+            if (totemsHeld.Contains("ward") == true)
+            {
+                Debug.Log("gone");
+                StartCoroutine(TotemCooldown());
+
+            }
+
+        }
+        
+    }
+
     /*
     void WhenDying()
     {
