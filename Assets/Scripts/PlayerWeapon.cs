@@ -18,6 +18,8 @@ public class PlayerWeapon : MonoBehaviour
 
     public bool isAttacking = false;
     public float attackRange = 1.5f;
+    public AudioSource attackSourceOne;
+    public AudioSource attackSourceTwo;
 
     void OnEnable()
     {
@@ -52,6 +54,12 @@ public class PlayerWeapon : MonoBehaviour
         {
             isAttacking = true;
             atkPos = atkValue * attackRange;
+            if (attackSourceOne.isPlaying == false) 
+            {
+                attackSourceOne.Play();
+            }
+     
+            
         }
         else if (Vector3.Distance(transform.localPosition, atkPos) < 0.01f)
         {
