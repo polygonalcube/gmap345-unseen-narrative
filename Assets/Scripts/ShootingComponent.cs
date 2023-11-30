@@ -11,6 +11,7 @@ public class ShootingComponent : MonoBehaviour
     public float angularSpeed;
     float shotDelay;
     public float shotDelaySet;
+    public AudioSource shotSound;
 
     public enum Mode
     {
@@ -43,6 +44,7 @@ public class ShootingComponent : MonoBehaviour
     {
         if (shotDelay <= 0)
         {
+            shotSound.Play();
             if (isSpread)
             {
                 if (isAlternating && onAlternativeCycle)

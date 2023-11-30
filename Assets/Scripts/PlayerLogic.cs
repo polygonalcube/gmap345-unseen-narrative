@@ -16,11 +16,13 @@ public class PlayerLogic : MonoBehaviour
 
     public InputAction movement;
 
+    //Reflect
     public InputAction reflect;
     public bool isReflecting;
     int bulletCount;
     List<float> angles = new List<float>();
 
+    //Totem Use
     public InputAction totemPower;
     public bool useTotem;
     public bool isSlowing;
@@ -28,11 +30,14 @@ public class PlayerLogic : MonoBehaviour
     public float totemCooldown = 6f;
     public GameObject[] bullets;
     public List<string> totemsHeld = new List<string>();
+    
+    //Dash
     public bool canDash = true;
     public bool isDashing;
     public float dashPower = 40f;
     public float dashTime = 0.2f;
     public float dashCooldown = 3f;
+    public AudioSource dashSound;
     
 
     public GameObject camZone;
@@ -180,6 +185,7 @@ public class PlayerLogic : MonoBehaviour
         {
             isDashing = true;
             canDash = false;
+            dashSound.Play();
             transform.Translate(movValue * dashPower * Time.deltaTime);
             var em = dashParticles.emission;
             var dur = dashParticles.duration;
