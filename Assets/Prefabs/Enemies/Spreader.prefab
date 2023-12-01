@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1357957570401912591}
   - component: {fileID: 8740116288327473625}
   - component: {fileID: 6065556577807198631}
-  - component: {fileID: 133881468276946447}
   - component: {fileID: 6001985444152567913}
   m_Layer: 0
   m_Name: Spreader
@@ -49,7 +48,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shooters:
-  - {fileID: 133881468276946447}
   - {fileID: 6001985444152567913}
   posOrNeg: -1
   addAngle: 90
@@ -67,29 +65,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnedObject: {fileID: 5100425429878216087, guid: 77b1fcdfd0051074984fed2332b06b50,
     type: 3}
---- !u!114 &133881468276946447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3409121155444034824}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ac1168b76094757eb7e51ce26a316e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pattern: {fileID: 0}
-  spawner: {fileID: 6065556577807198631}
-  speed: {x: 0, y: 0, z: 0}
-  angularSpeed: 10
-  shotDelaySet: 0.3
-  bulletCount: 2
-  isSpread: 1
-  spreadAngleSize: 60
-  isRadial: 0
-  isAlternating: 0
-  onAlternativeCycle: 0
 --- !u!114 &6001985444152567913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,6 +82,7 @@ MonoBehaviour:
   speed: {x: 0, y: 0, z: 0}
   angularSpeed: 5
   shotDelaySet: 1.5
+  shotSound: {fileID: 0}
   bulletCount: 5
   isSpread: 1
   spreadAngleSize: 60

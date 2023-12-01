@@ -4094,6 +4094,18 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 1828982563}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &686907457 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6001985444152567913, guid: 3a013ce00daf5dab5a4928ac450c5b28,
+    type: 3}
+  m_PrefabInstance: {fileID: 1828982563}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac1168b76094757eb7e51ce26a316e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &689829166
 GameObject:
   m_ObjectHideFlags: 0
@@ -4442,6 +4454,18 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 1925290974}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &730320839 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6001985444152567913, guid: 3a013ce00daf5dab5a4928ac450c5b28,
+    type: 3}
+  m_PrefabInstance: {fileID: 1925290974}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac1168b76094757eb7e51ce26a316e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &732443206
 GameObject:
   m_ObjectHideFlags: 0
@@ -16252,7 +16276,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spreader
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8740116288327473625, guid: 3a013ce00daf5dab5a4928ac450c5b28,
+        type: 3}
+      propertyPath: shooters.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740116288327473625, guid: 3a013ce00daf5dab5a4928ac450c5b28,
+        type: 3}
+      propertyPath: shooters.Array.data[0]
+      value: 
+      objectReference: {fileID: 686907457}
+    m_RemovedComponents:
+    - {fileID: 133881468276946447, guid: 3a013ce00daf5dab5a4928ac450c5b28, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16978,7 +17013,18 @@ PrefabInstance:
       propertyPath: onAlternativeCycle
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8740116288327473625, guid: 3a013ce00daf5dab5a4928ac450c5b28,
+        type: 3}
+      propertyPath: shooters.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8740116288327473625, guid: 3a013ce00daf5dab5a4928ac450c5b28,
+        type: 3}
+      propertyPath: shooters.Array.data[0]
+      value: 
+      objectReference: {fileID: 730320839}
+    m_RemovedComponents:
+    - {fileID: 133881468276946447, guid: 3a013ce00daf5dab5a4928ac450c5b28, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
