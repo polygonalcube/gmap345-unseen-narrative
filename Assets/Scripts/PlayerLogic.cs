@@ -63,7 +63,7 @@ public class PlayerLogic : MonoBehaviour
         var em = dashParticles.emission;
         em.enabled = false;
         bulletCount = 0;
-        
+        Time.timeScale = 1f;
     }
 
     void Update()
