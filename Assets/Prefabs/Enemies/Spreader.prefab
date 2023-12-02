@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3409121155444034824}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 3}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47,10 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3f20410d4061f4f1be52fd436f917cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shooters:
-  - {fileID: 6001985444152567913}
-  posOrNeg: -1
   addAngle: 90
+  shooter: {fileID: 6001985444152567913}
 --- !u!114 &6065556577807198631
 MonoBehaviour:
   m_ObjectHideFlags: 0
