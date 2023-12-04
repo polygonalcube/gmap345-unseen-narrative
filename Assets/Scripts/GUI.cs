@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-//using TMPro;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -17,13 +17,9 @@ public class GUI : MonoBehaviour
     void Update()
     {
         if (player.GetComponent<HPComponent>().health < 2)
-        {
             healthMask.sprite = hurt;
-        }
         else
-        {
             healthMask.sprite = healthy;
-        }
 
         if (player.GetComponent <HPComponent>().health == 0) 
         {
