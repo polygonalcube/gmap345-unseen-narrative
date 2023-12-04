@@ -41,7 +41,8 @@ public class ShootingComponent : MonoBehaviour
     {
         if (shotDelay <= 0)
         {
-            shotSound.Play();
+            if (shotSound != null)
+                shotSound.Play();
             if (isSpread)
             {
                 if (isAlternating && onAlternativeCycle)

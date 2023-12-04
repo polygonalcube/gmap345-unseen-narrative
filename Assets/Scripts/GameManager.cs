@@ -32,7 +32,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        
+        if (bulletPool[0] == null) //This fixes the issue of bullets disappearing upon scene reload.
+            CreateBulletPool();
     }
 
     public int Sign(float num)

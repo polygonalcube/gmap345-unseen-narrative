@@ -4077,10 +4077,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UI_Script, Assembly-CSharp
+      - m_Target: {fileID: 1638138529}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: SwapScene
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4088,7 +4088,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: OpeningScene
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &689829169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6867,8 +6867,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UI_Script, Assembly-CSharp
+      - m_Target: {fileID: 1638138529}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -6878,7 +6878,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1112461114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13214,7 +13214,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 1
-  m_Radius: 0.89
+  m_Radius: 0.7
   m_SlopeLimit: 1
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -13272,8 +13272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac1168b76094757eb7e51ce26a316e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pattern: {fileID: 0}
-  spawner: {fileID: 0}
   speed: {x: 0, y: 0, z: 0}
   angularSpeed: 12
   shotDelaySet: 0
@@ -13997,8 +13995,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UI_Script, Assembly-CSharp
+      - m_Target: {fileID: 1638138529}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -14008,7 +14006,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1398786334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14640,8 +14638,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UI_Script, Assembly-CSharp
+      - m_Target: {fileID: 1638138529}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -14651,7 +14649,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1535199352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15045,18 +15043,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UI_Script, Assembly-CSharp
+      - m_Target: {fileID: 1638138529}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: SwapScene
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: MainLevel
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1584306998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15443,8 +15441,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderValue: 0
-  timeMulti: 0
-  slider: {fileID: 0}
+  timeMulti: 1
+  slider: {fileID: 1214551284}
 --- !u!114 &1638138528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15458,8 +15456,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderValue: 0
-  timeMulti: 0
-  slider: {fileID: 0}
+  timeMulti: 1
+  slider: {fileID: 1137839163}
 --- !u!114 &1638138529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15469,15 +15467,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1638138522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a7ae2914c13eb0e38d9c4fec934987f, type: 3}
+  m_Script: {fileID: 11500000, guid: d8d4ed86bfbaba868a4b02ce8804629b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  healthMask: {fileID: 0}
-  healthy: {fileID: 0}
-  hurt: {fileID: 0}
-  deathMenu: {fileID: 0}
-  pauseMenu: {fileID: 0}
+  player: {fileID: 1235352763}
+  healthMask: {fileID: 83641695}
+  healthy: {fileID: 1912989156475845485, guid: 4e3aba56bb5e3d34a91a7a700ad39c09, type: 3}
+  hurt: {fileID: 7208789713517489145, guid: 4e3aba56bb5e3d34a91a7a700ad39c09, type: 3}
+  deathMenu: {fileID: 527727206}
+  pauseMenu: {fileID: 325098677}
 --- !u!1001 &1668056038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18264,10 +18262,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UI_Script, Assembly-CSharp
+      - m_Target: {fileID: 1638138529}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: SwapScene
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -18275,7 +18273,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: OpeningScene
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &2013782895
 MonoBehaviour:
   m_ObjectHideFlags: 0

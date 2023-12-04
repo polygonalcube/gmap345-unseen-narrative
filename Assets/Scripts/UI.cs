@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GUI : MonoBehaviour
+public class UI : MonoBehaviour
 {
     public GameObject player;
     public Image healthMask;
@@ -47,9 +47,9 @@ public class GUI : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void SwapScene(string sceneName)
+    public void SwapScene(int index)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(index);
     }
 
     public void QuitGame()
