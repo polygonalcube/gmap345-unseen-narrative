@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class ShootingComponent : MonoBehaviour
 {
-    public PatternComponent pattern;
-    public SpawningComponent spawner;
-
     public Vector3 speed;
     public float angularSpeed;
     float shotDelay;

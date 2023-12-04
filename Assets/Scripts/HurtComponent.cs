@@ -5,7 +5,6 @@ using UnityEngine;
 public class HurtComponent : MonoBehaviour
 {
     public HPComponent hp;
-    //public ScoreComponent score;
     public LayerMask layers;
     public string[] tags;
 

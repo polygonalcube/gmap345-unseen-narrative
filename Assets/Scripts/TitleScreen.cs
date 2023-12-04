@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class IntroUI : MonoBehaviour
+public class TitleScreen : MonoBehaviour
 {
     public void SwapScene(string sceneName)
     {

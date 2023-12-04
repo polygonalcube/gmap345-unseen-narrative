@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour
         {
             gm = this;
         }
-
         DontDestroyOnLoad(this.gameObject);
     }
 
@@ -47,6 +46,16 @@ public class GameManager : MonoBehaviour
             return 1;
         }
         return 0;
+    }
+
+    public GameObject FindPlayer()
+    {
+        return GameObject.Find("Player");
+    }
+
+    public PlayerLogic FindPlayerScript()
+    {
+        return GameObject.Find("Player").GetComponent<PlayerLogic>();
     }
 
     void CreateBulletPool()

@@ -18,7 +18,7 @@ public class CameraLogic : MonoBehaviour
     
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameManager.gm.FindPlayer();
     }
 
     void Update()
@@ -40,6 +40,10 @@ public class CameraLogic : MonoBehaviour
                 player.transform.position.z + mover.zSpeed * speedMultiplier);
             }
             transform.position = Vector3.SmoothDamp(transform.position, target, ref refVelocity, smoothTime, maxSpeed);
+        }
+        else
+        {
+            player = GameManager.gm.FindPlayer();
         }
     }
 }

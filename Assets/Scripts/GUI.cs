@@ -1,25 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+//using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class UI_Script : MonoBehaviour
+public class GUI : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject player;
     public Image healthMask;
     public Sprite healthy;
     public Sprite hurt;
     public GameObject deathMenu; 
     public GameObject pauseMenu;
-    
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (player.GetComponent<HPComponent>().health < 2)
