@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boss1 : EnemyBaseClass
 {
+    public HPComponent hp;
     public MoveComponent mover;
     public ShootingComponent[] shooters;
 
@@ -46,6 +48,7 @@ public class Boss1 : EnemyBaseClass
                 {
                     case States.IDLE:
                         anim.Play("Idle");
+                        CheckHealth();
                         if (stateTimer > stateTimes[0])
                         {
                             stateTimer = 0f;
@@ -61,6 +64,7 @@ public class Boss1 : EnemyBaseClass
                         break;
                     case States.MOVE:
                         anim.Play("Idle");
+                        CheckHealth();
                         if (stateTimer > stateTimes[1])
                         {
                             stateTimer = 0f;
@@ -74,6 +78,7 @@ public class Boss1 : EnemyBaseClass
                         break;
                     case States.SWIPE:
                         anim.Play("Swipe");
+                        CheckHealth();
                         if (stateTimer > stateTimes[2])
                         {
                             stateTimer = 0f;
@@ -82,6 +87,7 @@ public class Boss1 : EnemyBaseClass
                         break;
                     case States.CROSSFIRE:
                         anim.Play("Crossfire");
+                        CheckHealth();
                         if (stateTimer > stateTimes[3])
                         {
                             stateTimer = 0f;
@@ -107,6 +113,7 @@ public class Boss1 : EnemyBaseClass
                         break;
                     case States.EXPLOSION:
                         anim.Play("Explosion");
+                        CheckHealth();
                         if (stateTimer > stateTimes[4])
                         {
                             stateTimer = 0f;
@@ -138,8 +145,7 @@ public class Boss1 : EnemyBaseClass
                         anim.Play("Death");
                         if (stateTimer > stateTimes[6])
                         {
-                            stateTimer = 0f;
-                            state = States.DEATH;
+                            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                         }
                         break;
                 }
@@ -150,5 +156,11 @@ public class Boss1 : EnemyBaseClass
     bool CheckPlayerDistance()
     {
         return (Vector3.Distance(transform.position, player.transform.position) <= swipeDist);
+    }
+
+    void CheckHealth()
+    {
+        if (hp.health <= 0)
+            state = States.DEATH;
     }
 }
