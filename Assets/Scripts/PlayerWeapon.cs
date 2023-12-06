@@ -33,7 +33,7 @@ public class PlayerWeapon : MonoBehaviour
 
     void Start()
     {
-        col.enabled = true;
+        col.enabled = false;
     }
 
     void Update()
