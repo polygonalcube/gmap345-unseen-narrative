@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4558537658028398670}
   - component: {fileID: 1488576114376578548}
-  - component: {fileID: 2117120970655116738}
+  - component: {fileID: 1055262362342427943}
   - component: {fileID: 1395132473967210229}
   - component: {fileID: 7888677568424357316}
   - component: {fileID: 2694912714220050838}
@@ -60,7 +60,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2117120970655116738
+--- !u!114 &1055262362342427943
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7953111929731061075}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24ed8098cc534e12ab2a67d694a2747e, type: 3}
+  m_Script: {fileID: 11500000, guid: a53d2b2ec57850b3faea365d8759f298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   addAngle: 90
@@ -89,7 +89,7 @@ MonoBehaviour:
   - 5
   - 30
   - 3
-  swipeDist: 5
+  swipeDist: 1
   idealDist: 6
   stateTimer: 0
   state: 0

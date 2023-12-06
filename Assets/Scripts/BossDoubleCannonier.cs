@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Boss1 : EnemyBaseClass
+public class BossDoubleCannonier : EnemyBaseClass
 {
     public HPComponent hp;
     public MoveComponent mover;
