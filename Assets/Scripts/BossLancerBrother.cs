@@ -7,9 +7,10 @@ public class BossLancerBrother : EnemyBaseClass
 {
     public HPComponent hp;
     public MoveComponent mover;
-    public ShootingComponent shooter;
+    //public ShootingComponent shooter;
 
     public GameObject otherBro;
+    public GameObject lance;
 
     public float[] stateTimes = new float[3];
 
@@ -42,6 +43,7 @@ public class BossLancerBrother : EnemyBaseClass
                 {
                     case States.IDLE:
                         CheckHealth();
+                        lance.transform.localRotation = Quaternion.Euler(0f, GetMoveAng() + 180f, 0f);//eulerAngles = new Vector3(0f, GetMoveAng() + 180f, 0f);
                         if (stateTimer > stateTimes[0])
                         {
                             stateTimer = 0f;
