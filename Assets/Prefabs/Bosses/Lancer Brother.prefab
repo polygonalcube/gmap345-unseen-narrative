@@ -215,14 +215,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charCon: {fileID: 5569495502035597342}
-  accel: 14
+  accel: 21
   decel: 1
   maxSpeed: 21
   isNormalized: 1
   xSpeed: 0
   ySpeed: 0
   zSpeed: 0
-  angularSpeed: 14
+  angularSpeed: 2
 --- !u!114 &8861210741072600745
 MonoBehaviour:
   m_ObjectHideFlags: 0

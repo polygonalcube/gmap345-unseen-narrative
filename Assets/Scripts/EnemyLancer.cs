@@ -6,8 +6,6 @@ public class EnemyLancer : EnemyBaseClass
 {
     public MoveComponent mover;
 
-    public float idleTime = 0f;
-
     public Vector2 idealDist = new Vector2(3f, 5f);
     public float[] stateTimes = new float[2];
     public float stateTimer = 0f;
@@ -27,13 +25,16 @@ public class EnemyLancer : EnemyBaseClass
         base.Update();
         if (player != null)
         {
+            stateTimer += Time.deltaTime;
             switch(state)
             {
                 case States.IDLE:
                     stateTimer += Time.deltaTime;
+                    lance.transform.localRotation = Quaternion.Euler(0f, GetMoveAng() + 180f, 0f);
                     if (stateTimer > stateTimes[0])
                     {
                         stateTimer = 0f;
+                        lanceAngle = GetMoveAng();
                         state = States.MOVE;
                     }
                     break;
@@ -44,7 +45,7 @@ public class EnemyLancer : EnemyBaseClass
                         state = States.IDLE;
                     }
                     transform.eulerAngles = new Vector3(0f, lanceAngle, 0f);
-                    mover.MoveAngularly(transform.forward * GameManager.gm.timeSlowMulti);
+                    mover.MoveAngularly(transform.forward * GameManager.gm.timeSlowMulti); //
                     mover.ResetY();
                     transform.eulerAngles = Vector3.zero;
                     break;
