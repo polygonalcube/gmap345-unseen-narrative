@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class ShootingComponent : MonoBehaviour
 {
-    public PatternComponent pattern;
-    public SpawningComponent spawner;
-
     public Vector3 speed;
     public float angularSpeed;
     float shotDelay;
     public float shotDelaySet;
+    public AudioSource shotSound;
 
     public enum Mode
     {
@@ -43,6 +41,8 @@ public class ShootingComponent : MonoBehaviour
     {
         if (shotDelay <= 0)
         {
+            if (shotSound != null)
+                shotSound.Play();
             if (isSpread)
             {
                 if (isAlternating && onAlternativeCycle)

@@ -87,7 +87,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5809183509469300738, guid: 8d5d76914c91342468b729ac71448ec6,
+  m_Sprite: {fileID: 5268458726765652613, guid: 754d8af3fc067cb488768c27968e70b0,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -213,7 +213,7 @@ MonoBehaviour:
   charCon: {fileID: 4475275220869900625}
   accel: 9999
   decel: 9999
-  maxSpeed: 6
+  maxSpeed: 9
   isNormalized: 1
   xSpeed: 0
   ySpeed: 0
@@ -236,6 +236,7 @@ MonoBehaviour:
   speed: {x: 0, y: 0, z: 0}
   angularSpeed: 6
   shotDelaySet: 0.7
+  shotSound: {fileID: 0}
   bulletCount: 1
   isSpread: 0
   spreadAngleSize: 45

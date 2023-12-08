@@ -9,14 +9,14 @@ public class EnemyBaseClass : MonoBehaviour
 
     public virtual void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameManager.gm.FindPlayer();
     }
 
     public virtual void Update()
     {
         if (player == null)
         {
-            player = GameObject.Find("Player");
+            player = GameManager.gm.FindPlayer();
         }
     }
 

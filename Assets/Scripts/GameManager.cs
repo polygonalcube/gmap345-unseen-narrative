@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager gm;
 
     public SpawningComponent spawner;
-    public GameObject[] bulletPool = new GameObject[1000];
+    public GameObject[] bulletPool = new GameObject[10000];
 
     public float timeSlowMulti = 1f;
     public float timeSlowMultiSet = 0.25f;
@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour
         {
             gm = this;
         }
-
         DontDestroyOnLoad(this.gameObject);
     }
 
@@ -33,7 +32,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        
+        if (bulletPool[0] == null) //This fixes the issue of bullets disappearing upon scene reload.
+            CreateBulletPool();
     }
 
     public int Sign(float num)
@@ -47,6 +47,16 @@ public class GameManager : MonoBehaviour
             return 1;
         }
         return 0;
+    }
+
+    public GameObject FindPlayer()
+    {
+        return GameObject.Find("Player");
+    }
+
+    public PlayerLogic FindPlayerScript()
+    {
+        return GameObject.Find("Player").GetComponent<PlayerLogic>();
     }
 
     void CreateBulletPool()

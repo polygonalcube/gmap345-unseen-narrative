@@ -4,17 +4,29 @@ using UnityEngine;
 
 public class BillboardComponent : MonoBehaviour
 {
+    //Makes objects point towards the camera
     public float addTilt = 0f;
     GameObject cam;
     
     void Start()
     {
-        cam = GameObject.Find("Main Camera");
+        FindCamera();
     }
     
     void Update()
     {
-        transform.eulerAngles = new Vector3(cam.transform.eulerAngles.x + addTilt, 0f, 0f);
-        //transform.LookAt(cam.transform.position, -Vector3.forward);
+        if (cam == null)
+        {
+            FindCamera();
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(cam.transform.eulerAngles.x + addTilt, 0f, 0f);
+        }
+    }
+
+    void FindCamera()
+    {
+        cam = GameObject.Find("Main Camera");
     }
 }
