@@ -222,7 +222,7 @@ MonoBehaviour:
   xSpeed: 0
   ySpeed: 0
   zSpeed: 0
-  angularSpeed: 2
+  angularSpeed: 21
 --- !u!114 &8861210741072600745
 MonoBehaviour:
   m_ObjectHideFlags: 0
