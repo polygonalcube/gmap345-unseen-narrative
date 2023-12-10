@@ -32,7 +32,6 @@ public class Bar : MonoBehaviour
         {
             BarFill();
         }
-
     }
 
     public void BarFill()

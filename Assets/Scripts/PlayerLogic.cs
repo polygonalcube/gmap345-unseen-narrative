@@ -8,45 +8,63 @@ public class PlayerLogic : MonoBehaviour
     public HPComponent hp;
     public HurtComponent hbox;
     public MoveComponent mover;
+    public MoveComponent dashMover;
     public ShootingComponent shooter;
 
     public CharacterController charCon;
 
-    public Vector3 movValue = Vector3.zero;
-
+    //movement
     public InputAction movement;
 
-    //Reflect
+    public Vector3 movValue = Vector3.zero;
+    Vector3 prevMovValue = Vector3.right; //previous movValue != Vector3.zero for dash usage
+
+    //dash
+    public InputAction dash;
+
+    public bool isDashing;
+
+    float dashTimer;
+    public float dashTimerSet = 0.2f;
+
+    public float dashDelay;
+    public float dashDelaySet = 3f;
+
+    public AudioSource dashSound;
+
+    //reflect
     public InputAction reflect;
+
     public bool isReflecting;
     int bulletCount;
     List<float> angles = new List<float>();
 
-    //Totem Use
+    //totem use
     public InputAction totemPower;
     public bool useTotem;
     public bool isSlowing;
     public bool totemActive = true;
     public float totemCooldown = 6f;
     public GameObject[] bullets;
-    public List<string> totemsHeld = new List<string>();
-    
-    //Dash
-    public bool canDash = true;
-    public bool isDashing;
-    public float dashPower = 40f;
-    public float dashTime = 0.2f;
-    public float dashCooldown = 3f;
-    public AudioSource dashSound;
-    
+    public List<string> totemsHeld = new List<string>();    
 
     public GameObject camZone;
 
     public ParticleSystem dashParticles;
 
+    public enum States
+    {
+        IDLE,
+        MOVE,
+        DASH,
+        DEATH
+    }
+    public States state = States.IDLE;
+
     void OnEnable()
     {
         movement.Enable();
+        dash.Enable();
         reflect.Enable();
         totemPower.Enable();
     }
@@ -54,6 +72,7 @@ public class PlayerLogic : MonoBehaviour
     void OnDisable()
     {
         movement.Disable();
+        dash.Disable();
         reflect.Disable();
         totemPower.Disable();
     }
@@ -68,25 +87,69 @@ public class PlayerLogic : MonoBehaviour
 
     void Update()
     {
-        ReceiveInput();
-        if (Input.GetKeyDown(KeyCode.LeftShift) && (canDash == true))
+        switch(state)
         {
-            StartCoroutine(Dash());
+            case States.IDLE:
+                ReceiveInput();
+                //Movement();
+                Reflect();
+                Fall();
+                TotemPower();
+                SlowTime();
+                if (movValue != Vector3.zero)
+                {
+                    state = States.MOVE;
+                }
+                dashDelay -= Time.deltaTime;
+                if (isDashing && dashDelay <= 0f)
+                {
+                    hbox.active = false;
+                    dashTimer = dashTimerSet;
+                    state = States.DASH;
+                }
+                break;
+            case States.MOVE:
+                ReceiveInput();
+                Movement();
+                Reflect();
+                Fall();
+                TotemPower();
+                SlowTime();
+                if (movValue == Vector3.zero)
+                {
+                    state = States.IDLE;
+                }
+                dashDelay -= Time.deltaTime;
+                if (isDashing && dashDelay <= 0f)
+                {
+                    hbox.active = false;
+                    dashTimer = dashTimerSet;
+                    state = States.DASH;
+                }
+                break;
+            case States.DASH:
+                Dash();
+                if (dashTimer <= 0f)
+                {
+                    hbox.active = true;
+                    dashDelay = dashDelaySet;
+                    state = States.IDLE;
+                }
+                break;
         }
-        else
-        {
-            Movement();
-        }
-        Reflect();
-        TotemPower();
-        SlowTime();
-        
-        //WhenDying();
     }
 
-    void FixedUpdate()
+    void ReceiveInput()
     {
-        Fall();
+        movValue = movement.ReadValue<Vector2>();
+        movValue = new Vector3(movValue.x, 0f, movValue.y);
+        if (movValue != Vector3.zero)
+        {
+            prevMovValue = movValue;
+        }
+        isDashing = (dash.ReadValue<float>() == 1f);
+        isReflecting = (reflect.ReadValue<float>() == 1f);
+        useTotem = (totemPower.ReadValue<float>() == 1f);
     }
 
     void Movement()
@@ -95,13 +158,11 @@ public class PlayerLogic : MonoBehaviour
         mover.ResetY();
     }
 
-    void ReceiveInput()
+    void Dash()
     {
-        movValue = movement.ReadValue<Vector2>();
-        movValue = new Vector3(movValue.x, 0f, movValue.y);
-
-        isReflecting = (reflect.ReadValue<float>() == 1f);
-        useTotem = (totemPower.ReadValue<float>() == 1f);
+        dashMover.Move(prevMovValue);
+        dashMover.ResetY();
+        dashTimer -= Time.deltaTime;
     }
 
     void Reflect()
@@ -143,7 +204,6 @@ public class PlayerLogic : MonoBehaviour
             GameManager.gm.timeSlowMulti = GameManager.gm.timeSlowMultiSet;
             StartCoroutine(TotemCooldown());
         }
-        
     }
 
     void TotemPower()
@@ -154,48 +214,8 @@ public class PlayerLogic : MonoBehaviour
             {
                 Debug.Log("gone");
                 StartCoroutine(TotemCooldown());
-
             }
-
         }
-        
-    }
-
-    /*
-    void WhenDying()
-    {
-        if (hp.health <= 0)
-        {
-            StartCoroutine(Die());
-        }
-    }
-
-    IEnumerator Die()
-    {
-        yield return new WaitForEndOfFrame();
-        Destroy(this.gameObject);
-    }
-    */
-
-    private IEnumerator Dash()
-    {
-
-        float startTime = Time.time;
-        while (Time.time < startTime + dashTime) 
-        {
-            isDashing = true;
-            canDash = false;
-            dashSound.Play();
-            transform.Translate(movValue * dashPower * Time.deltaTime);
-            var em = dashParticles.emission;
-            var dur = dashParticles.duration;
-            em.enabled = true;
-            Invoke(nameof(DisableDashDust), dur);
-            isDashing = false;
-            yield return null;
-        }
-        yield return new WaitForSeconds(dashCooldown);
-        canDash = true;
     }
 
     IEnumerator TotemCooldown()
@@ -233,5 +253,4 @@ public class PlayerLogic : MonoBehaviour
             bullets.SetActive(false);
         }
     }
-
 }

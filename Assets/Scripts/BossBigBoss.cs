@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class BossBigBoss : EnemyBaseClass
 {
     public HPComponent hp;
-    public MoveComponent mover;
+    //public MoveComponent mover;
     public ShootingComponent[] shooters;
 
     public float spinAngle = 0f;
     public float spinSpd = 10f;
+
+    public int nextAtk = 3;
 
     public float[] stateTimes = new float[3];
 
@@ -46,7 +48,17 @@ public class BossBigBoss : EnemyBaseClass
                         if (stateTimer > stateTimes[0])
                         {
                             stateTimer = 0f;
-                            state = States.CIRCLE;
+                            nextAtk++;
+                            if (nextAtk > 3)
+                            {
+                                nextAtk = 1;
+                            }
+                            if (nextAtk == 1)
+                                state = States.CIRCLE;
+                            if (nextAtk == 2)
+                                state = States.SPIN;
+                            if (nextAtk == 3)
+                                state = States.FAST;
                         }
                         break;
                     case States.CIRCLE:
@@ -54,7 +66,7 @@ public class BossBigBoss : EnemyBaseClass
                         if (stateTimer > stateTimes[1])
                         {
                             stateTimer = 0f;
-                            state = States.SPIN;
+                            state = States.IDLE;
                         }
                         shooters[0].Shoot(transform.position, positionOffset: Vector3.zero, 
                         shotDirection: new Vector3(0f, AngleToObject(new Vector2(transform.position.x, transform.position.z), 
@@ -65,10 +77,10 @@ public class BossBigBoss : EnemyBaseClass
                         break;
                     case States.SPIN:
                         CheckHealth();
-                        if (stateTimer > stateTimes[1])
+                        if (stateTimer > stateTimes[2])
                         {
                             stateTimer = 0f;
-                            state = States.FAST;
+                            state = States.IDLE;
                         }
                         spinAngle += Time.deltaTime * spinSpd;
 
@@ -80,10 +92,10 @@ public class BossBigBoss : EnemyBaseClass
                         break;
                     case States.FAST:
                         CheckHealth();
-                        if (stateTimer > stateTimes[1])
+                        if (stateTimer > stateTimes[3])
                         {
                             stateTimer = 0f;
-                            state = States.CIRCLE;
+                            state = States.IDLE;
                         }
                         shooters[4].Shoot(transform.position, positionOffset: Vector3.zero, 
                         shotDirection: new Vector3(0f, 0f, 0f), targetPosition: player.transform.position);
@@ -91,7 +103,7 @@ public class BossBigBoss : EnemyBaseClass
                         shotDirection: new Vector3(0f, 0f, 0f), targetPosition: player.transform.position);
                         break;
                     case States.DEATH:
-                        if (stateTimer > stateTimes[6])
+                        if (stateTimer > stateTimes[4])
                         {
                             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                         }

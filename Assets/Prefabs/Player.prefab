@@ -4905,6 +4905,7 @@ GameObject:
   - component: {fileID: 8291292449292726050}
   - component: {fileID: 8467284546207576432}
   - component: {fileID: 1407436011247242100}
+  - component: {fileID: 6767692889285539909}
   - component: {fileID: 2140779322747265348}
   - component: {fileID: 8123638790747940024}
   m_Layer: 9
@@ -5037,6 +5038,33 @@ CapsuleCollider:
   m_Height: 1.5
   m_Direction: 2
   m_Center: {x: 0, y: 0.25, z: 0}
+--- !u!54 &6767692889285539909
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3459692599068955857}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!82 &2140779322747265348
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5442,6 +5470,7 @@ GameObject:
   - component: {fileID: 399255946627362814}
   - component: {fileID: 9174548524933730297}
   - component: {fileID: 2132292331120062592}
+  - component: {fileID: 7545371864429456377}
   - component: {fileID: 166877601446782079}
   - component: {fileID: 9070646015138471986}
   - component: {fileID: 829230828128935832}
@@ -5486,9 +5515,9 @@ MonoBehaviour:
   hp: {fileID: 399255946627362814}
   hbox: {fileID: 9174548524933730297}
   mover: {fileID: 2132292331120062592}
+  dashMover: {fileID: 7545371864429456377}
   shooter: {fileID: 166877601446782079}
   charCon: {fileID: 9070646015138471986}
-  movValue: {x: 0, y: 0, z: 0}
   movement:
     m_Name: Movement
     m_Type: 0
@@ -5578,6 +5607,29 @@ MonoBehaviour:
       m_Action: Movement
       m_Flags: 8
     m_Flags: 0
+  movValue: {x: 0, y: 0, z: 0}
+  dash:
+    m_Name: Dash
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 932f9b5e-a14d-42db-8fa4-f9c43b77b118
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: a0b4cc79-eaac-4e68-a7b0-cfb2265e7379
+      m_Path: <Keyboard>/k
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Dash
+      m_Flags: 0
+    m_Flags: 0
+  isDashing: 0
+  dashTimerSet: 0.2
+  dashDelay: 0
+  dashDelaySet: 3
+  dashSound: {fileID: 412548939698585126}
   reflect:
     m_Name: Reflect
     m_Type: 0
@@ -5619,14 +5671,9 @@ MonoBehaviour:
   totemCooldown: 6
   bullets: []
   totemsHeld: []
-  canDash: 1
-  isDashing: 0
-  dashPower: 140
-  dashTime: 0.2
-  dashCooldown: 4
-  dashSound: {fileID: 412548939698585126}
   camZone: {fileID: 0}
   dashParticles: {fileID: 577465644243546580}
+  state: 0
 --- !u!114 &399255946627362814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5688,6 +5735,27 @@ MonoBehaviour:
   ySpeed: 0
   zSpeed: 0
   angularSpeed: 0
+--- !u!114 &7545371864429456377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5764016864327790846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41b2a722ce15f74aaa65bb462f6927c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charCon: {fileID: 9070646015138471986}
+  accel: 9999
+  decel: 9
+  maxSpeed: 40
+  isNormalized: 1
+  xSpeed: 0
+  ySpeed: 0
+  zSpeed: 0
+  angularSpeed: 40
 --- !u!114 &166877601446782079
 MonoBehaviour:
   m_ObjectHideFlags: 0

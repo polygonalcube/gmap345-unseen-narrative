@@ -9,7 +9,7 @@ public class BarBaseAction : Bar
     public override void Update()
     {
         if (playerScript != null)
-            actionCheck = playerScript.canDash;
+            actionCheck = playerScript.isDashing; //might be finicky
         base.Update();
     }
 }
