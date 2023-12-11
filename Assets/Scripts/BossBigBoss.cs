@@ -20,11 +20,11 @@ public class BossBigBoss : EnemyBaseClass
 
     public enum States
     {
-        IDLE, //0.5
-        CIRCLE, //5
-        SPIN, //5
-        FAST, //5
-        DEATH //5
+        IDLE, //3
+        CIRCLE, //6
+        SPIN, //6
+        FAST, //6
+        DEATH //3
     }
     public States state = States.IDLE;
     
