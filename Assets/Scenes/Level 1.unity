@@ -22676,7 +22676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderValue: 0
-  timeMulti: 1
+  timeMulti: 0.3333
   slider: {fileID: 1137839163}
 --- !u!114 &1638138529
 MonoBehaviour:

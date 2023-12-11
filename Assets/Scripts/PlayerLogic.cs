@@ -105,6 +105,7 @@ public class PlayerLogic : MonoBehaviour
                 {
                     hbox.active = false;
                     dashTimer = dashTimerSet;
+                    DashParticles();
                     state = States.DASH;
                 }
                 break;
@@ -124,6 +125,7 @@ public class PlayerLogic : MonoBehaviour
                 {
                     hbox.active = false;
                     dashTimer = dashTimerSet;
+                    DashParticles();
                     state = States.DASH;
                 }
                 break;
@@ -133,6 +135,7 @@ public class PlayerLogic : MonoBehaviour
                 {
                     hbox.active = true;
                     dashDelay = dashDelaySet;
+                    DisableDashDust();
                     state = States.IDLE;
                 }
                 break;
@@ -146,6 +149,7 @@ public class PlayerLogic : MonoBehaviour
         if (movValue != Vector3.zero)
         {
             prevMovValue = movValue;
+            Debug.Log(prevMovValue);
         }
         isDashing = (dash.ReadValue<float>() == 1f);
         isReflecting = (reflect.ReadValue<float>() == 1f);
@@ -163,6 +167,22 @@ public class PlayerLogic : MonoBehaviour
         dashMover.Move(prevMovValue);
         dashMover.ResetY();
         dashTimer -= Time.deltaTime;
+    }
+
+    void DashParticles()
+    {
+        //isDashing = true;
+        //canDash = false;
+        dashSound.Play();
+        //transform.Translate(movValue * dashPower * Time.deltaTime);
+        var em = dashParticles.emission;
+        var dur = dashParticles.duration;
+        em.enabled = true;
+        Invoke(nameof(DisableDashDust), dur);
+        //isDashing = false;
+        //yield return null;
+        //yield return new WaitForSeconds(dashCooldown);
+        //canDash = true;
     }
 
     void Reflect()

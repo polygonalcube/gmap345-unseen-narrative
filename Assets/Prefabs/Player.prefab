@@ -5749,9 +5749,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charCon: {fileID: 9070646015138471986}
   accel: 9999
-  decel: 9
+  decel: 999
   maxSpeed: 40
-  isNormalized: 1
+  isNormalized: 0
   xSpeed: 0
   ySpeed: 0
   zSpeed: 0
