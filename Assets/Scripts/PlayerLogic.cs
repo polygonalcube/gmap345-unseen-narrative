@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerLogic : MonoBehaviour
+public class PlayerLogic : MonoBehaviour, IDataPersistence
 {
     public HPComponent hp;
     public HurtComponent hbox;
@@ -272,5 +272,15 @@ public class PlayerLogic : MonoBehaviour
         {
             bullets.SetActive(false);
         }
+    }
+
+    public void LoadData(GameData data)
+    {
+        this.totemsHeld = data.totemsHeld;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.totemsHeld = this.totemsHeld;
     }
 }
