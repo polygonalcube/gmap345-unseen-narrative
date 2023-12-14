@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerLogic : MonoBehaviour, IDataPersistence
 {
@@ -38,6 +39,8 @@ public class PlayerLogic : MonoBehaviour, IDataPersistence
     public bool isReflecting;
     int bulletCount;
     List<float> angles = new List<float>();
+
+    public int lastActiveScene;
 
     //totem use
     public InputAction totemPower;
@@ -83,6 +86,7 @@ public class PlayerLogic : MonoBehaviour, IDataPersistence
         em.enabled = false;
         bulletCount = 0;
         Time.timeScale = 1f;
+        lastActiveScene = SceneManager.GetActiveScene().buildIndex;
     }
 
     void Update()
@@ -232,7 +236,7 @@ public class PlayerLogic : MonoBehaviour, IDataPersistence
         {
             if (totemsHeld.Contains("ward") == true)
             {
-                Debug.Log("gone");
+                WardClear();
                 StartCoroutine(TotemCooldown());
             }
         }
@@ -277,10 +281,12 @@ public class PlayerLogic : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
         this.totemsHeld = data.totemsHeld;
+        this.lastActiveScene = data.lastScene;
     }
 
     public void SaveData(ref GameData data)
     {
         data.totemsHeld = this.totemsHeld;
+        data.lastScene = this.lastActiveScene;
     }
 }

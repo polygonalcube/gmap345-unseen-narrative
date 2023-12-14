@@ -12,7 +12,7 @@ public class PopupUIScript : MonoBehaviour
 
     public string currentName;
     public string currentDescription;
-    public Image currentSprite;
+    public Sprite currentSprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +29,8 @@ public class PopupUIScript : MonoBehaviour
     {
         uiDescription.text = currentDescription;
         uiName.text = currentName;
-        uiImage = currentSprite;
+        uiImage.sprite = currentSprite;
+        uiImage.SetNativeSize();
         StartCoroutine(HideUI());
     }
 

@@ -8,7 +8,7 @@ public class PickupScript : MonoBehaviour
     public GameObject popup;
     public string itemName;
     public string itemDescription;
-    public Image itemSprite;
+    public Sprite itemSprite;
     public GameObject UI;
     public GameObject player;
     public string totemRefName;
