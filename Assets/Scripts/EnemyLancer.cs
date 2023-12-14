@@ -25,30 +25,33 @@ public class EnemyLancer : EnemyBaseClass
         base.Update();
         if (player != null)
         {
-            stateTimer += Time.deltaTime;
-            switch(state)
+            if (Vector3.Distance(transform.position, player.transform.position) <= atkDist)
             {
-                case States.IDLE:
-                    stateTimer += Time.deltaTime;
-                    lance.transform.localRotation = Quaternion.Euler(0f, GetMoveAng() + 180f, 0f);
-                    if (stateTimer > stateTimes[0])
-                    {
-                        stateTimer = 0f;
-                        lanceAngle = GetMoveAng();
-                        state = States.MOVE;
-                    }
-                    break;
-                case States.MOVE:
-                    if (stateTimer > stateTimes[1])
-                    {
-                        stateTimer = 0f;
-                        state = States.IDLE;
-                    }
-                    transform.eulerAngles = new Vector3(0f, lanceAngle, 0f);
-                    mover.MoveAngularly(transform.forward * GameManager.gm.timeSlowMulti); //
-                    mover.ResetY();
-                    transform.eulerAngles = Vector3.zero;
-                    break;
+                stateTimer += Time.deltaTime;
+                switch(state)
+                {
+                    case States.IDLE:
+                        stateTimer += Time.deltaTime;
+                        lance.transform.localRotation = Quaternion.Euler(0f, GetMoveAng() + 180f, 0f);
+                        if (stateTimer > stateTimes[0])
+                        {
+                            stateTimer = 0f;
+                            lanceAngle = GetMoveAng();
+                            state = States.MOVE;
+                        }
+                        break;
+                    case States.MOVE:
+                        if (stateTimer > stateTimes[1])
+                        {
+                            stateTimer = 0f;
+                            state = States.IDLE;
+                        }
+                        transform.eulerAngles = new Vector3(0f, lanceAngle, 0f);
+                        mover.MoveAngularly(transform.forward * GameManager.gm.timeSlowMulti); //
+                        mover.ResetY();
+                        transform.eulerAngles = Vector3.zero;
+                        break;
+                }
             }
         }
     }  

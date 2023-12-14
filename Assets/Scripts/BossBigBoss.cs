@@ -38,7 +38,7 @@ public class BossBigBoss : EnemyBaseClass
         base.Update();
         if (player != null)
         {
-            if (Vector3.Distance(transform.position, player.transform.position) < 35f)
+            if (Vector3.Distance(transform.position, player.transform.position) < atkDist)
             {
                 stateTimer += Time.deltaTime;
                 switch(state)

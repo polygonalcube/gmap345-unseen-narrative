@@ -7,6 +7,8 @@ public class EnemyBaseClass : MonoBehaviour
     public float addAngle = 90f;
     protected GameObject player;
 
+    public float atkDist = 35f;
+
     public virtual void Start()
     {
         player = GameManager.gm.FindPlayer();
