@@ -8,9 +8,11 @@ public class EnemyBaseClass : MonoBehaviour
     protected GameObject player;
 
     public float atkDist = 35f;
+    protected bool isAlert = false;
 
     public virtual void Start()
     {
+        isAlert = false;
         player = GameManager.gm.FindPlayer();
     }
 

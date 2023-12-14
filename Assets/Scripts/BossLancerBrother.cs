@@ -36,7 +36,11 @@ public class BossLancerBrother : EnemyBaseClass
         base.Update();
         if (player != null)
         {
-            if (Vector3.Distance(transform.position, player.transform.position) < atkDist)
+            if (Vector3.Distance(transform.position, player.transform.position) <= atkDist)
+            {
+                isAlert = true;
+            }
+            if (isAlert)
             {
                 stateTimer += Time.deltaTime;
                 switch(state)

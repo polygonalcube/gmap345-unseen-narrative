@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addAngle: 90
-  atkDist: 1
+  atkDist: 13
   mover: {fileID: 8353354272224218806}
   shooter: {fileID: 6725986550011049548}
   idleTime: 2

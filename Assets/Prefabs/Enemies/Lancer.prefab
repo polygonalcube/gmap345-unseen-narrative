@@ -319,6 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addAngle: 90
+  atkDist: 8
   mover: {fileID: 3909449819879947294}
   idealDist: {x: 3, y: 5}
   stateTimes:

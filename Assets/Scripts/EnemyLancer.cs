@@ -27,6 +27,10 @@ public class EnemyLancer : EnemyBaseClass
         {
             if (Vector3.Distance(transform.position, player.transform.position) <= atkDist)
             {
+                isAlert = true;
+            }
+            if (isAlert)
+            {
                 stateTimer += Time.deltaTime;
                 switch(state)
                 {

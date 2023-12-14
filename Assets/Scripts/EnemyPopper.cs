@@ -28,6 +28,10 @@ public class EnemyPopper : EnemyBaseClass
         {
             if (Vector3.Distance(transform.position, player.transform.position) <= atkDist)
             {
+                isAlert = true;
+            }
+            if (isAlert)
+            {
                 switch(state)
                 {
                     case States.IDLE:

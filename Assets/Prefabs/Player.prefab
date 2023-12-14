@@ -4993,6 +4993,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Attacking
       m_Flags: 8
+    - m_Name: 
+      m_Id: 6fb1f96b-418a-44c5-923e-053354b80fb3
+      m_Path: <Gamepad>/rightStick
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Attacking
+      m_Flags: 0
     m_Flags: 0
   atkValue: {x: 0, y: 0, z: 0}
   atkPos: {x: 0, y: 0, z: 0}
@@ -5606,6 +5614,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Movement
       m_Flags: 8
+    - m_Name: 
+      m_Id: c6e5c369-7de9-42dc-827f-e85d26e5dd72
+      m_Path: <Gamepad>/dpad
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 0
     m_Flags: 0
   movValue: {x: 0, y: 0, z: 0}
   dash:
@@ -5619,6 +5635,30 @@ MonoBehaviour:
     - m_Name: 
       m_Id: a0b4cc79-eaac-4e68-a7b0-cfb2265e7379
       m_Path: <Keyboard>/k
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Dash
+      m_Flags: 0
+    - m_Name: 
+      m_Id: a7a069f7-3318-4027-a3ed-658df32a304e
+      m_Path: <Keyboard>/shift
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Dash
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 4f9cffa5-7f64-4ded-8f33-f0eb64406296
+      m_Path: <Keyboard>/ctrl
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Dash
+      m_Flags: 0
+    - m_Name: 
+      m_Id: f98747c2-85a8-4c7b-be15-878e7aa59334
+      m_Path: <Gamepad>/leftShoulder
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -5646,6 +5686,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Reflect
       m_Flags: 0
+    - m_Name: 
+      m_Id: 10c4596b-978d-4cb3-8164-1faae823cad6
+      m_Path: <Gamepad>/rightShoulder
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Reflect
+      m_Flags: 0
     m_Flags: 0
   isReflecting: 0
   totemPower:
@@ -5659,6 +5707,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: f224cded-d2af-44ec-a76c-e02b8ae98512
       m_Path: <Keyboard>/l
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Totem Power
+      m_Flags: 0
+    - m_Name: 
+      m_Id: c3fed68b-e347-49f5-8dba-a9540eba2cc6
+      m_Path: <Gamepad>/rightTrigger
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -5749,13 +5805,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charCon: {fileID: 9070646015138471986}
   accel: 9999
-  decel: 999
-  maxSpeed: 40
+  decel: 0
+  maxSpeed: 50
   isNormalized: 0
   xSpeed: 0
   ySpeed: 0
   zSpeed: 0
-  angularSpeed: 40
+  angularSpeed: 5
 --- !u!114 &166877601446782079
 MonoBehaviour:
   m_ObjectHideFlags: 0

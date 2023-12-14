@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addAngle: 90
-  atkDist: 1
+  atkDist: 11
   shooter: {fileID: 6001985444152567913}
 --- !u!114 &7585254337872349845
 MonoBehaviour:
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: {x: 0, y: 0, z: 0}
   angularSpeed: 5
-  shotDelaySet: 1
+  shotDelaySet: 2
   shotSound: {fileID: 0}
   bulletCount: 5
   isSpread: 1
