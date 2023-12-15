@@ -52,6 +52,8 @@ public class PlayerLogic : MonoBehaviour, IDataPersistence
     public InputAction totemPower;
     public bool useTotem;
     public bool isSlowing;
+    public float timeSlowTime;
+    public float timeSlowTimeSet = 4f;
     public bool totemActive = true;
     public float totemCooldown = 6f;
     public GameObject[] bullets;
@@ -242,13 +244,27 @@ public class PlayerLogic : MonoBehaviour, IDataPersistence
     {
         GameManager.gm.timeSlowMulti = 1f;
 
-        if (isSlowing)
+        if (isSlowing && timeSlowTime <= 0)
         {
-            GameManager.gm.timeSlowMulti = GameManager.gm.timeSlowMultiSet;
+            timeSlowTime = timeSlowTimeSet;
+            //GameManager.gm.timeSlowMulti = GameManager.gm.timeSlowMultiSet;
             StartCoroutine(TotemCooldown());
+            //StartCoroutine(SlowTimeForAmount());
+        }
+        if (timeSlowTime > 0f)
+        {
+            timeSlowTime -= Time.deltaTime;
+            GameManager.gm.timeSlowMulti = GameManager.gm.timeSlowMultiSet;
         }
     }
-
+    /*
+    IEnumerator SlowTimeForAmount()
+    {
+        GameManager.gm.timeSlowMulti = GameManager.gm.timeSlowMultiSet;
+        yield return new WaitForSeconds(4);
+        GameManager.gm.timeSlowMulti = 1f;
+    }
+    */
     void TotemPower()
     {
         if (useTotem && totemActive == true)

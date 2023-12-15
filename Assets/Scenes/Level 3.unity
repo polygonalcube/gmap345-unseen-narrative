@@ -836,6 +836,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 835512892}
     m_Modifications:
+    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
+        type: 3}
+      propertyPath: m_Name
+      value: ShortWall_Gate
+      objectReference: {fileID: 0}
     - target: {fileID: 5621057902756030135, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -885,11 +890,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
-        type: 3}
-      propertyPath: m_Name
-      value: ShortWall_Gate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1685,6 +1685,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 835512892}
     m_Modifications:
+    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
+        type: 3}
+      propertyPath: m_Name
+      value: LongWall_Gate
+      objectReference: {fileID: 0}
     - target: {fileID: 2974187845283681366, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1734,11 +1739,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
-        type: 3}
-      propertyPath: m_Name
-      value: LongWall_Gate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2155,6 +2155,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 502842682}
     m_Modifications:
+    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
+        type: 3}
+      propertyPath: m_Name
+      value: ShortWall_Gate (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 5621057902756030135, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2204,11 +2209,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
-        type: 3}
-      propertyPath: m_Name
-      value: ShortWall_Gate (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2297,6 +2297,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 502842682}
     m_Modifications:
+    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
+        type: 3}
+      propertyPath: m_Name
+      value: ShortWall_Gate
+      objectReference: {fileID: 0}
     - target: {fileID: 5621057902756030135, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2346,11 +2351,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
-        type: 3}
-      propertyPath: m_Name
-      value: ShortWall_Gate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3301,6 +3301,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1745621261}
     m_Modifications:
+    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
+        type: 3}
+      propertyPath: m_Name
+      value: LongWall_Gate (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2974187845283681366, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3350,11 +3355,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
-        type: 3}
-      propertyPath: m_Name
-      value: LongWall_Gate (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4770,6 +4770,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1932033420}
     m_Modifications:
+    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
+        type: 3}
+      propertyPath: m_Name
+      value: LongWall_Gate (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2974187845283681366, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4820,11 +4825,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
-        type: 3}
-      propertyPath: m_Name
-      value: LongWall_Gate (1)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4848,74 +4848,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1486816177}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &327208683
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 327208686}
-  - component: {fileID: 327208685}
-  - component: {fileID: 327208684}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &327208684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 327208683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &327208685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 327208683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &327208686
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 327208683}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &327367282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5975,6 +5907,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1168288184}
     m_Modifications:
+    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
+        type: 3}
+      propertyPath: m_Name
+      value: LongWall_Gate (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2974187845283681366, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6024,11 +5961,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
-        type: 3}
-      propertyPath: m_Name
-      value: LongWall_Gate (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6646,6 +6578,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1168288184}
     m_Modifications:
+    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
+        type: 3}
+      propertyPath: m_Name
+      value: ShortWall_Gate (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 5621057902756030135, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6695,11 +6632,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
-        type: 3}
-      propertyPath: m_Name
-      value: ShortWall_Gate (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8590,6 +8522,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1037376717}
     m_Modifications:
+    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
+        type: 3}
+      propertyPath: m_Name
+      value: ShortWall_Gate
+      objectReference: {fileID: 0}
     - target: {fileID: 5621057902756030135, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8639,11 +8576,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
-        type: 3}
-      propertyPath: m_Name
-      value: ShortWall_Gate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9042,6 +8974,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1674884141}
     m_Modifications:
+    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
+        type: 3}
+      propertyPath: m_Name
+      value: LongWall_Gate
+      objectReference: {fileID: 0}
     - target: {fileID: 2974187845283681366, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9091,11 +9028,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
-        type: 3}
-      propertyPath: m_Name
-      value: LongWall_Gate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9418,6 +9350,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1104788772}
     m_Modifications:
+    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
+        type: 3}
+      propertyPath: m_Name
+      value: LongWall_Gate
+      objectReference: {fileID: 0}
     - target: {fileID: 2974187845283681366, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9467,11 +9404,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
-        type: 3}
-      propertyPath: m_Name
-      value: LongWall_Gate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10190,6 +10122,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1674884141}
     m_Modifications:
+    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
+        type: 3}
+      propertyPath: m_Name
+      value: ShortWall_Gate
+      objectReference: {fileID: 0}
     - target: {fileID: 5621057902756030135, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10239,11 +10176,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
-        type: 3}
-      propertyPath: m_Name
-      value: ShortWall_Gate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11982,6 +11914,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2069083178}
     m_Modifications:
+    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
+        type: 3}
+      propertyPath: m_Name
+      value: LongWall_Gate
+      objectReference: {fileID: 0}
     - target: {fileID: 2974187845283681366, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12031,11 +11968,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
-        type: 3}
-      propertyPath: m_Name
-      value: LongWall_Gate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12892,6 +12824,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1037376717}
     m_Modifications:
+    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
+        type: 3}
+      propertyPath: m_Name
+      value: ShortWall_Gate (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 5621057902756030135, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12941,11 +12878,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
-        type: 3}
-      propertyPath: m_Name
-      value: ShortWall_Gate (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15151,6 +15083,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 206195381}
     m_Modifications:
+    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
+        type: 3}
+      propertyPath: m_Name
+      value: ShortWall_Gate (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 5621057902756030135, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15200,11 +15137,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
-        type: 3}
-      propertyPath: m_Name
-      value: ShortWall_Gate (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15373,6 +15305,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 206195381}
     m_Modifications:
+    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
+        type: 3}
+      propertyPath: m_Name
+      value: ShortWall_Gate
+      objectReference: {fileID: 0}
     - target: {fileID: 5621057902756030135, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15422,11 +15359,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
-        type: 3}
-      propertyPath: m_Name
-      value: ShortWall_Gate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15769,6 +15701,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1674884141}
     m_Modifications:
+    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
+        type: 3}
+      propertyPath: m_Name
+      value: LongWall_Gate (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2974187845283681366, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15818,11 +15755,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
-        type: 3}
-      propertyPath: m_Name
-      value: LongWall_Gate (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16137,6 +16069,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1932033420}
     m_Modifications:
+    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
+        type: 3}
+      propertyPath: m_Name
+      value: LongWall_Gate
+      objectReference: {fileID: 0}
     - target: {fileID: 2974187845283681366, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16186,11 +16123,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
-        type: 3}
-      propertyPath: m_Name
-      value: LongWall_Gate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18022,6 +17954,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1745621261}
     m_Modifications:
+    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
+        type: 3}
+      propertyPath: m_Name
+      value: LongWall_Gate
+      objectReference: {fileID: 0}
     - target: {fileID: 2974187845283681366, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18071,11 +18008,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
-        type: 3}
-      propertyPath: m_Name
-      value: LongWall_Gate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24155,6 +24087,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2069083178}
     m_Modifications:
+    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
+        type: 3}
+      propertyPath: m_Name
+      value: LongWall_Gate (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2974187845283681366, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24204,11 +24141,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
-        type: 3}
-      propertyPath: m_Name
-      value: LongWall_Gate (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24775,6 +24707,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1854223725}
     m_Modifications:
+    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
+        type: 3}
+      propertyPath: m_Name
+      value: ShortWall_Gate (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 5621057902756030135, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24824,11 +24761,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
-        type: 3}
-      propertyPath: m_Name
-      value: ShortWall_Gate (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28498,6 +28430,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 242151299}
     m_Modifications:
+    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
+        type: 3}
+      propertyPath: m_Name
+      value: LongWall_Gate
+      objectReference: {fileID: 0}
     - target: {fileID: 2974187845283681366, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28547,11 +28484,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2453794096064188140, guid: 6fe8678227f8e2e41ad0f65dd647eb81,
-        type: 3}
-      propertyPath: m_Name
-      value: LongWall_Gate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28810,6 +28742,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1104788772}
     m_Modifications:
+    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
+        type: 3}
+      propertyPath: m_Name
+      value: ShortWall_Gate
+      objectReference: {fileID: 0}
     - target: {fileID: 5621057902756030135, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28859,11 +28796,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
-        type: 3}
-      propertyPath: m_Name
-      value: ShortWall_Gate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30573,6 +30505,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1854223725}
     m_Modifications:
+    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
+        type: 3}
+      propertyPath: m_Name
+      value: ShortWall_Gate
+      objectReference: {fileID: 0}
     - target: {fileID: 5621057902756030135, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30622,11 +30559,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4992753440248347661, guid: 0f83cbbe607374c4eb0485b7f4cb7a6a,
-        type: 3}
-      propertyPath: m_Name
-      value: ShortWall_Gate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31145,4 +31077,3 @@ SceneRoots:
   - {fileID: 747114082}
   - {fileID: 823573210}
   - {fileID: 732443207}
-  - {fileID: 327208686}
