@@ -5668,7 +5668,7 @@ MonoBehaviour:
   isDashing: 0
   dashTimerSet: 0.2
   dashDelay: 0
-  dashDelaySet: 3
+  dashDelaySet: 2
   dashSound: {fileID: 412548939698585126}
   reflect:
     m_Name: Reflect
@@ -5696,6 +5696,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
   isReflecting: 0
+  lastActiveScene: 0
   totemPower:
     m_Name: Totem Power
     m_Type: 0

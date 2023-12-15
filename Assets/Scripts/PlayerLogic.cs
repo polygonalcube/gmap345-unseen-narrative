@@ -40,6 +40,12 @@ public class PlayerLogic : MonoBehaviour, IDataPersistence
     int bulletCount;
     List<float> angles = new List<float>();
 
+    public float reflectTime;
+    public float reflectTimeMax = 3f;
+
+    public float reflectDelay;
+    public float reflectDelaySet = 5f;
+
     public int lastActiveScene;
 
     //totem use
@@ -85,7 +91,7 @@ public class PlayerLogic : MonoBehaviour, IDataPersistence
         var em = dashParticles.emission;
         em.enabled = false;
         bulletCount = 0;
-        Time.timeScale = 1f;
+        Time.timeScale = 1f; //necessary to prevent the game from freezing in Time.timeScale = 0
         lastActiveScene = SceneManager.GetActiveScene().buildIndex;
     }
 
@@ -191,11 +197,18 @@ public class PlayerLogic : MonoBehaviour, IDataPersistence
 
     void Reflect()
     {
-        if (isReflecting)
+        reflectDelay -= Time.deltaTime;
+        if (isReflecting && reflectDelay <= 0)
         {
             hbox.active = false;
+            reflectTime += Time.deltaTime;
+            if (reflectTime > reflectTimeMax)
+            {
+                reflectDelay = reflectDelaySet;
+                isReflecting = false;
+            }
         }
-        else if (!isReflecting)
+        else/* if (!isReflecting)*/
         {
             hbox.active = true;
             if (bulletCount > 0)
@@ -204,10 +217,16 @@ public class PlayerLogic : MonoBehaviour, IDataPersistence
                 {
                     shooter.Shoot(transform.position, positionOffset: Vector3.zero, 
                     shotDirection: new Vector3(0f, angles[i], 0f), targetPosition: transform.position, "Player Damage");
+                    if (i >= 10)
+                    {
+                        break;
+                    }
                 }
+                reflectDelay = reflectDelaySet;
             }
             bulletCount = 0;
             angles.Clear();
+            reflectTime = 0f;
         }
     }
 
@@ -257,7 +276,7 @@ public class PlayerLogic : MonoBehaviour, IDataPersistence
 
     void OnTriggerEnter(Collider col)
     {
-        if (isReflecting)
+        if (isReflecting && reflectDelay <= 0)
         {
             bulletCount++;
             angles.Add(col.gameObject.transform.eulerAngles.y + 180f);
