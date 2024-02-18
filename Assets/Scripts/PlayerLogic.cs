@@ -118,7 +118,7 @@ public class PlayerLogic : MonoBehaviour, IDataPersistence
                     hbox.active = false;
                     dashTimer = dashTimerSet;
                     DashParticles();
-                    state = States.DASH;
+                   state = States.DASH;
                 }
                 break;
             case States.MOVE:
